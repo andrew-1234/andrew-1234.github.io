@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on andrew-1234</title>
-    <link>https://andrew-1234.github.io/</link>
-    <description>Recent content in Home on andrew-1234</description>
+    <title>past-projects on andrew-1234</title>
+    <link>https://andrew-1234.github.io/past-projects/</link>
+    <description>Recent content in past-projects on andrew-1234</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 15 Sep 2022 13:44:08 +1000</lastBuildDate><atom:link href="https://andrew-1234.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://andrew-1234.github.io/past-projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Variation in _L. wilcoxii_ and _L. jungguy_ advertisement calls: a bioacoustic analysis </title>
       <link>https://andrew-1234.github.io/past-projects/calls/</link>
