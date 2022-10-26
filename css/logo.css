@@ -4,14 +4,15 @@
     font-weight: inherit;
     color: var(--bg);
 }
-
 .page__logo:before {
     content: none;
 }
 
 .page__logo-inner {
     display: block;
-    background: var(--green);
+    background: var(--logo-bg);
+    background: var(--logo);
+    opacity: 0.90;
     padding: 0.25rem;
 }
 
@@ -22,14 +23,13 @@ a.page__logo-inner:link, a.page__logo-inner:visited {
 
 a.page__logo-inner:hover,
 a.page__logo-inner:active {
-    background: var(--bright-green);
+    opacity: 1;
 }
 
 .page__logo-inner:before {
     content: "[";
     color: var(--bg);
 }
-
 .page__logo-inner:after {
     content: "] $";
     color: var(--bg);
