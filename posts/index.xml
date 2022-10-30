@@ -13,7 +13,17 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://andrew-1234.github.io/posts/haplotype-map/</guid>
-      <description></description>
+      <description>In progress.</description>
+    </item>
+    
+    <item>
+      <title>Split WAVE audio based on selection table</title>
+      <link>https://andrew-1234.github.io/posts/split-raven/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://andrew-1234.github.io/posts/split-raven/</guid>
+      <description>Andrew Schwenke 29 October 2022
+This is a small example workflow using the warbleR and Rraven packages. It takes a WAVE file and Raven selection table as input, and returns one WAVE file (.wav) for each selection, as well as one Raven selection table (.txt file) per selection. The practice data (CC1_20171010_125500.wav) is an audio recording taken at Cedar Creek, south-east Queensland, Australia, and released by Andrew Schwenke under a CC BY 4.</description>
     </item>
     
   </channel>

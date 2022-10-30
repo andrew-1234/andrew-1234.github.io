@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><title>Split WAVE audio based on selection table &ndash; andrew-1234</title>
+<meta name="description" content="Ecologist, currently working at QUT as a research assistant.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://andrew-1234.github.io/css/palettes/base16-dark.css">
+<link rel="stylesheet" href="https://andrew-1234.github.io/css/risotto.css">
+<link rel="stylesheet" href="https://andrew-1234.github.io/css/custom.css">
+</head>
+
+    <body>
+        <div class="page">
+
+            <header class="page__header"><h1 class="page__logo"><a href="https://andrew-1234.github.io/" class="page__logo-inner">andrew-1234</a></h1>
+<nav class="page__nav main-nav">
+    <ul>
+    
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="/current-projects/" title="current-projects">current-projects</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="/past-projects/" title="past-projects">past-projects</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item active" href="/posts/" title="Posts">Posts</a></li>
+    
+    </ul>
+</nav>
+
+</header>
+
+            <section class="page__body">
+    <header class="content__header">
+        <h1>Split WAVE audio based on selection table</h1>
+    </header>
+    <div class="content__body">
+        <p><a href="https://github.com/andrew-1234/">Andrew Schwenke</a>
+29 October 2022</p>
+<p>This is a small example workflow using the
+<a href="https://cran.r-project.org/package=warbleR">warbleR</a> and
+<a href="https://cran.r-project.org/package=Rraven">Rraven</a> packages. It takes a
+WAVE file and Raven selection table as input, and returns one WAVE file
+(<code>.wav</code>) for each selection, as well as one Raven selection table
+(<code>.txt</code> file) per selection. The practice data (CC1_20171010_125500.wav)
+is an audio recording taken at Cedar Creek, south-east Queensland,
+Australia, and released by Andrew Schwenke under a CC BY 4.0 license.</p>
+<p><strong>Input:</strong></p>
+<p><img src="images/input.png" alt="Input"></p>
+<p><strong>Output:</strong></p>
+<p><img src="images/output.png" alt="Output"></p>
+<h2 id="prepare-the-data">Prepare the data</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(warbleR)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(Rraven)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dplyr)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># with no file tag added, set name from file to true, and provide upper or lower WAV extension format</span>
+</span></span><span style="display:flex;"><span>rvn.dat.1 <span style="color:#f92672">&lt;-</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">imp_raven</span>(
+</span></span><span style="display:flex;"><span>                all.data <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>,
+</span></span><span style="display:flex;"><span>                path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;data/typical/&#34;</span>,
+</span></span><span style="display:flex;"><span>                name.from.file <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>,
+</span></span><span style="display:flex;"><span>                ext.case <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lower&#34;</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># rename columns to use with warbler</span>
+</span></span><span style="display:flex;"><span>rvn.dat.2 <span style="color:#f92672">&lt;-</span>
+</span></span><span style="display:flex;"><span>        rvn.dat.1 <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>        dplyr<span style="color:#f92672">::</span><span style="color:#a6e22e">rename</span>(
+</span></span><span style="display:flex;"><span>                selec <span style="color:#f92672">=</span> Selection,
+</span></span><span style="display:flex;"><span>                start <span style="color:#f92672">=</span> `Begin Time (s)`,
+</span></span><span style="display:flex;"><span>                end <span style="color:#f92672">=</span> `End Time (s)`
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># generate a selection table</span>
+</span></span><span style="display:flex;"><span>rvn.dat.st <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">selection_table</span>(rvn.dat.2, path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;data/typical/&#34;</span>)
+</span></span></code></pre></div><pre><code>## checking selections (step 1 of 2):
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">check_sels</span>(rvn.dat.st, path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;data/typical/&#34;</span>)
+</span></span></code></pre></div><pre><code>## all selections are OK
+</code></pre>
+<h2 id="generate-segmented-wave-files">Generate segmented WAVE files</h2>
+<p>Margin is the time in seconds to add to generated WAVE files
+before/after each selection. Margin = 0 would generate WAVEs that are
+exactly the length of the selection annotations.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>margin <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cut_sels</span>(
+</span></span><span style="display:flex;"><span>        X <span style="color:#f92672">=</span> rvn.dat.st,
+</span></span><span style="display:flex;"><span>        path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;data/typical/&#34;</span>,
+</span></span><span style="display:flex;"><span>        mar <span style="color:#f92672">=</span> margin,
+</span></span><span style="display:flex;"><span>        dest.path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;output/cuts/typical&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># check if Delta time (s) exists</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># create if it doesn&#39;t</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># modify data frame to reflect what will be the new start and end times for each selection when the WAVE is split </span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">if</span>(<span style="color:#f92672">!</span><span style="color:#e6db74">&#34;Delta Time (s)&#34;</span> <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">colnames</span>(rvn.dat.2))
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>        rvn.dat.3 <span style="color:#f92672">&lt;-</span>
+</span></span><span style="display:flex;"><span>                rvn.dat.2 <span style="color:#f92672">%&gt;%</span> dplyr<span style="color:#f92672">::</span><span style="color:#a6e22e">mutate</span>(`Delta Time (s)` <span style="color:#f92672">=</span> end <span style="color:#f92672">-</span> start)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        rvn.dat.4 <span style="color:#f92672">&lt;-</span>
+</span></span><span style="display:flex;"><span>                rvn.dat.3 <span style="color:#f92672">%&gt;%</span> dplyr<span style="color:#f92672">::</span><span style="color:#a6e22e">mutate</span>(start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">+</span> margin,
+</span></span><span style="display:flex;"><span>                                            end <span style="color:#f92672">=</span> (start <span style="color:#f92672">+</span> `Delta Time (s)`))
+</span></span><span style="display:flex;"><span>} else {
+</span></span><span style="display:flex;"><span>        rvn.dat.4 <span style="color:#f92672">&lt;-</span>
+</span></span><span style="display:flex;"><span>                rvn.dat.2 <span style="color:#f92672">%&gt;%</span> dplyr<span style="color:#f92672">::</span><span style="color:#a6e22e">mutate</span>(start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">+</span> margin,
+</span></span><span style="display:flex;"><span>                                            end <span style="color:#f92672">=</span> (start <span style="color:#f92672">+</span> `Delta Time (s)`))
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="generate-individual-selection-tables-for-each-cut-wave">Generate individual selection tables for each cut WAVE</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># list the cut WAVE files you generated</span>
+</span></span><span style="display:flex;"><span>cut_wavs <span style="color:#f92672">&lt;-</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">list.files</span>(path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;output/cuts/typical/&#34;</span>, pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;.wav&#34;</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># generate selection tables</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">for </span>(x in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">length</span>(rvn.dat.4<span style="color:#f92672">$</span>selec)){
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">exp_raven</span>(X <span style="color:#f92672">=</span> rvn.dat.4[x,], path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;output/cuts/typical/&#34;</span>, file.name <span style="color:#f92672">=</span> cut_wavs[x])
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+    </div>
+    <footer class="content__footer"></footer>
+
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+<h1 class="about__title">andrew-1234</h1>
+<div class="aside__about">
+    <img class="about__logo" src="https://andrew-1234.github.io/images/sprite.svg" alt="Logo">
+
+<p class="about__description">Ecologist, currently working at QUT as a research assistant.</p>
+</div>
+
+
+<ul class="aside__social-links">
+    
+    <li>
+        <a href="https://github.com/andrew-1234/" rel="me" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="mailto:andrew.schwenke@gmail.com" rel="me" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="https://orcid.org/0000-0002-5281-0115" rel="me" aria-label="ORCID" title="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="https://twitter.com/andrew_untitled" rel="me" aria-label="Twitter" title="Twitter"><i class="fa-brands fa-square-twitter" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+</ul></div>
+                <hr>
+                <div class="aside__content">
+<header>
+    Split WAVE audio based on selection table:
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#prepare-the-data">Prepare the data</a></li>
+    <li><a href="#generate-segmented-wave-files">Generate segmented WAVE files</a></li>
+    <li><a href="#generate-individual-selection-tables-for-each-cut-wave">Generate individual selection tables for each cut WAVE</a></li>
+  </ul>
+</nav>
+</header>
+    
+    
+
+                </div>
+            </section>
+
+            <footer class="page__footer"><p class="copyright"></p>
+<p class="advertisement">Powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/joeroe/risotto">risotto</a>.</p>
+</footer>
+
+        </div>
+    </body>
+
+</html>
