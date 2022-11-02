@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><title>Workflow to access and format A20 metadata with R &ndash; andrew-1234</title>
+<meta name="description" content="Ecologist, currently working at QUT as a research assistant.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://andrew-1234.github.io/css/palettes/base16-dark.css">
+<link rel="stylesheet" href="https://andrew-1234.github.io/css/risotto.css">
+<link rel="stylesheet" href="https://andrew-1234.github.io/css/custom.css">
+</head>
+
+    <body>
+        <div class="page">
+
+            <header class="page__header"><h1 class="page__logo"><a href="https://andrew-1234.github.io/" class="page__logo-inner">andrew-1234</a></h1>
+<nav class="page__nav main-nav">
+    <ul>
+    
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="/current-projects/" title="current-projects">current-projects</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="/past-projects/" title="past-projects">past-projects</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item active" href="/posts/" title="Posts">Posts</a></li>
+    
+    </ul>
+</nav>
+
+</header>
+
+            <section class="page__body">
+    <header class="content__header">
+        <h1>Workflow to access and format A20 metadata with R</h1>
+    </header>
+    <div class="content__body">
+        <p>Andrew Schwenke
+24/10/2022</p>
+<h2 id="license">License</h2>
+<p>This repository is licensed under an MIT license. The final hoot
+detective data set (<code>output/hoot_final.csv</code>) is licensed under a
+<a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+License</a> and is attributed
+to <a href="https://github.com/QutEcoacoustics">QUT Ecoacoustics</a> and <a href="https://hootdetective.net.au/">Hoot
+Detective</a>.</p>
+<h2 id="introduction">Introduction</h2>
+<p>This is a simple workflow for preparing a dataset that can be used for
+species distribution modelling, using data from the <a href="https://hootdetective.net.au/">Hoot
+Detective</a> project. Hoot Detective is a
+citizen science project that uses audio from the <a href="https://acousticobservatory.org/">Australian Acoustic
+Observatory (A2O)</a>.</p>
+<p>The starting hoot detective dataset contains species presence/absence
+for five different owl species, as well as the corresponding audio
+recording ID and site ID for each presence/absence record. To run a SDM,
+we will need the latitude and longitude of these recording locations.
+This information is found in the study site metadata, which we can
+access using the A2O <a href="https://api.acousticobservatory.org/api-docs/index.html">Acoustic Workbench
+API</a>.</p>
+<h2 id="setup">Setup</h2>
+<h3 id="load-packages">Load packages</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>knitr<span style="color:#f92672">::</span>opts_chunk<span style="color:#f92672">$</span><span style="color:#a6e22e">set</span>(echo <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dplyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(xml2)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(rvest)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(httr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(jsonlite)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(stringr)
+</span></span></code></pre></div><h3 id="import-the-presenceabsence-hoot-detective-data">Import the presence/absence (hoot detective) data</h3>
+<p>Here I import the dataset and select only the columns of interest
+(recording id, site id, and the five owl species). Then I create a
+<code>sites</code> dataframe that has one row for each site ID present in the data.
+I will use this dataframe later for making multiple API calls.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>hoot <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;data/hoot-detec-12102021.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>hoot_v1 <span style="color:#f92672">&lt;-</span> hoot[, <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span><span style="color:#f92672">:</span><span style="color:#ae81ff">9</span>)]
+</span></span><span style="display:flex;"><span>sites <span style="color:#f92672">&lt;-</span> hoot_v1 <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">count</span>(site_id)
+</span></span></code></pre></div><h2 id="api-calls-to-a2o">API calls to A2O</h2>
+<h3 id="practice-making-a-single-api-call">Practice making a single API call</h3>
+<p>Here I show how you can make a single API call for a specific site ID.
+In this example, a GET call is made to get the metadata for site ID 253.
+This response data is then formatted as text. You can explore the
+contents of <code>response_253_text</code>, which is a list data type, and contains
+all of the information returned by the API call. I then subset this list
+to get the information of interest, and finally format the output as a
+dataframe to inspect the contents.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># api call using GET</span>
+</span></span><span style="display:flex;"><span>response_253 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">GET</span>(<span style="color:#e6db74">&#34;https://api.acousticobservatory.org/sites/253&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(response_253)
+</span></span></code></pre></div><pre><code>##             Length Class       Mode       
+## url            1   -none-      character  
+## status_code    1   -none-      numeric    
+## headers       17   insensitive list       
+## all_headers    1   -none-      list       
+## cookies        7   data.frame  list       
+## content     1907   -none-      raw        
+## date           1   POSIXct     numeric    
+## times          6   -none-      numeric    
+## request        7   request     list       
+## handle         1   curl_handle externalptr
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>response_253<span style="color:#f92672">$</span>headers[<span style="color:#e6db74">&#39;content-type&#39;</span>] <span style="color:#75715e"># check the content-type returned by the API call</span>
+</span></span></code></pre></div><pre><code>## $`content-type`
+## [1] &quot;application/json; charset=utf-8&quot;
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># format as text</span>
+</span></span><span style="display:flex;"><span>response_253_text <span style="color:#f92672">&lt;-</span> response_253 <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">content</span>(as <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fromJSON</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># subset what we want from the response ($data) and format as a data frame</span>
+</span></span><span style="display:flex;"><span>site253 <span style="color:#f92672">&lt;-</span> response_253_text<span style="color:#f92672">$</span>data
+</span></span><span style="display:flex;"><span>site253 <span style="color:#f92672">&lt;-</span> site253<span style="color:#a6e22e">[c</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">11</span><span style="color:#f92672">:</span><span style="color:#ae81ff">15</span>)]
+</span></span><span style="display:flex;"><span>site253 <span style="color:#f92672">&lt;-</span>
+</span></span><span style="display:flex;"><span>        site253<span style="color:#a6e22e">[c</span>(
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;id&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;name&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;description&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;notes&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;creator_id&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;created_at&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;updater_id&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;updated_at&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;region_id&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;custom_latitude&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;custom_longitude&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;location_obfuscated&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;project_ids&#34;</span>
+</span></span><span style="display:flex;"><span>        )]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>site253_df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(<span style="color:#a6e22e">t</span>(<span style="color:#a6e22e">sapply</span>(site253,c)))
+</span></span></code></pre></div><h3 id="api-call-for-each-site-id-using-a-for-loop">API call for each site ID using a for loop</h3>
+<p>Now that we successfully accessed the API using a single site ID, we can
+use a for loop to make a GET call for each unique site ID, and output
+the results in a single dataframe.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>new_df  <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">NULL</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">for </span>(x in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">length</span>(sites<span style="color:#f92672">$</span>site_id)){
+</span></span><span style="display:flex;"><span>        base <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#39;https://api.acousticobservatory.org/sites/&#39;</span>
+</span></span><span style="display:flex;"><span>        site_id <span style="color:#f92672">&lt;-</span> sites<span style="color:#f92672">$</span>site_id[x]
+</span></span><span style="display:flex;"><span>        API_URL <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste0</span>(base, site_id)
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">GET</span>(API_URL)
+</span></span><span style="display:flex;"><span>        response_text <span style="color:#f92672">&lt;-</span> response <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">content</span>(as <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fromJSON</span>()
+</span></span><span style="display:flex;"><span>        output <span style="color:#f92672">&lt;-</span> response_text<span style="color:#f92672">$</span>data
+</span></span><span style="display:flex;"><span>        output <span style="color:#f92672">&lt;-</span> output<span style="color:#a6e22e">[c</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">11</span><span style="color:#f92672">:</span><span style="color:#ae81ff">15</span>)]
+</span></span><span style="display:flex;"><span>        df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(<span style="color:#a6e22e">t</span>(<span style="color:#a6e22e">sapply</span>(output,c)))
+</span></span><span style="display:flex;"><span>        new_df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rbind</span>(new_df, df)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="prepare-the-final-dataset">Prepare the final dataset</h2>
+<h3 id="clean-the-text-data">Clean the text data</h3>
+<p>The notes column contains multiple pieces of information, so I will
+split this data into unique columns and clean the text output.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># fix notes column </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># separate by , into separate columns </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># remove { }</span>
+</span></span><span style="display:flex;"><span>new_df<span style="color:#f92672">$</span>notes <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">gsub</span>(<span style="color:#e6db74">&#34;\\{|\\}&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, new_df<span style="color:#f92672">$</span>notes)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>metadata <span style="color:#f92672">&lt;-</span> new_df <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">separate</span>(
+</span></span><span style="display:flex;"><span>        col <span style="color:#f92672">=</span> notes,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">c</span>(
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;site_id&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;point_id&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;site_point_id&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;site_name&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;point_name&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;condition&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;replicate&#34;</span>
+</span></span><span style="display:flex;"><span>        ),
+</span></span><span style="display:flex;"><span>        sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;,&#34;</span>
+</span></span><span style="display:flex;"><span>) <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">mutate_at</span>(<span style="color:#a6e22e">vars</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">4</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>)), <span style="color:#f92672">~</span> <span style="color:#a6e22e">str_remove</span>(., <span style="color:#e6db74">&#34;.*:&#34;</span>)) <span style="color:#f92672">%&gt;%</span> <span style="color:#75715e">#remove txt before and including : </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">mutate_at</span>(<span style="color:#a6e22e">vars</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">4</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>)), <span style="color:#f92672">~</span> <span style="color:#a6e22e">str_remove_all</span>(., <span style="color:#e6db74">&#39;&#34;&#39;</span>)) <span style="color:#f92672">%&gt;%</span> <span style="color:#75715e"># remove quotes</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">mutate</span>(<span style="color:#a6e22e">across</span>(<span style="color:#a6e22e">where</span>(is.character), str_trim)) <span style="color:#75715e"># trim leading/trailing white space</span>
+</span></span></code></pre></div><h3 id="merge-the-data">Merge the data</h3>
+<p>The hoot detective dataset can now be merged with the metadata. You can
+then write the dataframe to a csv file, if you would like to analyse the
+data using the Ecocommons platform.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>hoot_v1<span style="color:#f92672">$</span>site_id <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.character</span>(hoot_v1<span style="color:#f92672">$</span>site_id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># rename site_id to point id for hoot data</span>
+</span></span><span style="display:flex;"><span>hoot_v2 <span style="color:#f92672">&lt;-</span> hoot_v1 <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">rename</span>(point_id <span style="color:#f92672">=</span> site_id)
+</span></span><span style="display:flex;"><span>metadata <span style="color:#f92672">&lt;-</span> metadata <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">select</span>(<span style="color:#f92672">-</span>id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>combined <span style="color:#f92672">&lt;-</span> hoot_v2 <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">left_join</span>(metadata, by <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;point_id&#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#write.csv(combined,&#34;output/hoot_final.csv&#34;, row.names = FALSE)</span>
+</span></span></code></pre></div><hr>
+<details>
+<summary>
+In progress
+</summary>
+<h2 id="data-exploration">Data exploration</h2>
+<p>Check presence/absence for each point ID.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>combined<span style="color:#f92672">$</span>Powerful.owl <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.factor</span>(x <span style="color:#f92672">=</span> combined<span style="color:#f92672">$</span>Powerful.owl)
+</span></span><span style="display:flex;"><span>combined <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(point_id) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">count</span>(Powerful.owl) 
+</span></span></code></pre></div><pre><code>## # A tibble: 48 × 3
+## # Groups:   point_id [37]
+##    point_id Powerful.owl     n
+##    &lt;chr&gt;    &lt;fct&gt;        &lt;int&gt;
+##  1 217      NO            1867
+##  2 217      YES              3
+##  3 218      NO            1457
+##  4 219      NO             999
+##  5 220      NO            1955
+##  6 25       NO            1270
+##  7 253      NO             862
+##  8 253      YES             13
+##  9 254      NO             522
+## 10 254      YES             16
+## # … with 38 more rows
+</code></pre>
+</details>
+
+    </div>
+    <footer class="content__footer"></footer>
+
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+<h1 class="about__title">andrew-1234</h1>
+<div class="aside__about">
+    <img class="about__logo" src="https://andrew-1234.github.io/images/sprite.svg" alt="Logo">
+
+<p class="about__description">Ecologist, currently working at QUT as a research assistant.</p>
+</div>
+
+
+<ul class="aside__social-links">
+    
+    <li>
+        <a href="https://github.com/andrew-1234/" rel="me" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="mailto:andrew.schwenke@gmail.com" rel="me" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="https://orcid.org/0000-0002-5281-0115" rel="me" aria-label="ORCID" title="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="https://twitter.com/andrew_untitled" rel="me" aria-label="Twitter" title="Twitter"><i class="fa-brands fa-square-twitter" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+</ul></div>
+                <hr>
+                <div class="aside__content">
+<header>
+    Workflow to access and format A20 metadata with R:
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#license">License</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#setup">Setup</a>
+      <ul>
+        <li><a href="#load-packages">Load packages</a></li>
+        <li><a href="#import-the-presenceabsence-hoot-detective-data">Import the presence/absence (hoot detective) data</a></li>
+      </ul>
+    </li>
+    <li><a href="#api-calls-to-a2o">API calls to A2O</a>
+      <ul>
+        <li><a href="#practice-making-a-single-api-call">Practice making a single API call</a></li>
+        <li><a href="#api-call-for-each-site-id-using-a-for-loop">API call for each site ID using a for loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#prepare-the-final-dataset">Prepare the final dataset</a>
+      <ul>
+        <li><a href="#clean-the-text-data">Clean the text data</a></li>
+        <li><a href="#merge-the-data">Merge the data</a></li>
+      </ul>
+    </li>
+    <li><a href="#data-exploration">Data exploration</a></li>
+  </ul>
+</nav>
+</header>
+    
+    
+
+                </div>
+            </section>
+
+            <footer class="page__footer"><p class="copyright"></p>
+<p class="advertisement">Powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/joeroe/risotto">risotto</a>.</p>
+</footer>
+
+        </div>
+    </body>
+
+</html>

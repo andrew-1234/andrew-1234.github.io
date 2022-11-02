@@ -10,11 +10,13 @@
   </url><url>
     <loc>https://andrew-1234.github.io/categories/</loc>
   </url><url>
-    <loc>https://andrew-1234.github.io/current-projects/</loc>
-  </url><url>
     <loc>https://andrew-1234.github.io/posts/haplotype-map/</loc>
   </url><url>
+    <loc>https://andrew-1234.github.io/current-projects/</loc>
+  </url><url>
     <loc>https://andrew-1234.github.io/past-projects/</loc>
+  </url><url>
+    <loc>https://andrew-1234.github.io/posts/raven-shortcuts/</loc>
   </url><url>
     <loc>https://andrew-1234.github.io/series/</loc>
   </url><url>
@@ -23,5 +25,7 @@
     <loc>https://andrew-1234.github.io/tags/</loc>
   </url><url>
     <loc>https://andrew-1234.github.io/past-projects/calls/</loc>
+  </url><url>
+    <loc>https://andrew-1234.github.io/posts/a2o-api/</loc>
   </url>
 </urlset>
