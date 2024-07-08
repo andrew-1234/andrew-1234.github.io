@@ -1,0 +1,31 @@
+<!-- <h2>Projects</h2>
+<ul>
+  {{ range (where .Site.RegularPages "Section" "projects") }}
+  <li>
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  </li>
+  {{ end }}
+</ul> -->
+
+<h2 class="portfolio-title">Projects</h2>
+<ul class="project-list">
+  {{ range (where .Site.RegularPages "Section" "projects") }}
+  <li class="project-item">
+    <div class="project-header">
+      <h3 class="project-title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h3>
+      <div class="project-date">{{ .Date.Format "January 2, 2006" }}</div>
+    </div>
+    <p class="project-summary">{{ .Summary }}</p>
+    {{ if .Params.tags }}
+    <ul class="project-tags">
+      {{ range .Params.tags }}
+      <li class="tag">{{ . }}</li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </li>
+  {{ end }}
+</ul>

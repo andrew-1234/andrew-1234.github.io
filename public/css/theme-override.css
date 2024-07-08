@@ -1,0 +1,55 @@
+footer { font-size: 90%; }
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.project-item {
+  margin-bottom: 20px;
+  /* padding-bottom: 20px; */
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.project-date {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.project-title a {
+  color: #abb2ff;
+  /* text-decoration: none; */
+  margin: 0;
+  padding-top: -100px;
+  /* font-size: 1.5em; */
+}
+
+.project-summary {
+  /* font-size: 1.1em; */
+  color: #444;
+  margin-top: -20px;
+}
+
+.project-tags {
+  list-style: none;
+  padding: 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 2px 8px;
+  margin: 1px;
+  font-size: 0.85em;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0px;
+  margin-top: -20px;
+}
