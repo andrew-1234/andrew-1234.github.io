@@ -1,0 +1,15 @@
+{
+  "hash": "6cb842526115fc068846b6979e080e9b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Colours\n\nTags: `colours` `palettes` `ggplot2` `colors`\n\nColours and colour palettes. \n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(paletteer)\npal_orange <- paletteer_d(\"ggsci::deep_orange_material\", 10)\npal_dy <- paletteer_c(\"grDevices::Dynamic\", 16)\npal_gr <- paletteer_c(\"grDevices::Grays\", 12)\n\npal_ter <- paletteer_c(\"grDevices::Terrain 2\", 16)\n# Reverse\npal_red <- paletteer_c(\"grDevices::Reds 3\", 12, -1)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

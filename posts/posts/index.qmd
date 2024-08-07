@@ -1,0 +1,20 @@
+---
+title: "Posts"
+pagetitle: "Posts"
+subtitle: "Notes and thoughts"
+listing:
+  - id: posts
+    contents:
+      - "*"
+    type: table
+    date-format: full
+    fields: [title, author, description, reading-time]
+    table-hover: true
+    sort-ui: false
+    filter-ui: false
+
+
+---
+
+::: {#posts}
+:::

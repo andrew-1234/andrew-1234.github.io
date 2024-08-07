@@ -1,0 +1,358 @@
+/*-- scss:defaults --*/
+
+// Table
+$table-header-color: #ffffff;
+
+// Tags (for listings)
+$tag-bg: #e9ecef;
+$tag-color: #067df4;
+
+// To sort / delete
+
+$theme-background-color: #116f66;
+$background-color: #f8f9fa;
+$border-color: #dee2e6;
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Theme colors 
+$dark-fox-bg: #fe4322b9;
+$fox-orange: #fe4422;
+$fox-red: #ff0505;
+$eggplant: #593643ff;
+$eggplant-2: #764c6aff;
+$red-crayola: #e53249ff;
+$rich-black: #14171fff;
+$cerise: #f3125fff;
+
+// Main stuff
+$primary-color: $red-crayola;
+$secondary-color: #6c757d;
+
+$headings-color: $red-crayola;
+// $text-color: #fffcc5ce; // I like this color... perhaps
+$text-color: rgba(255, 255, 255, 0.822); // Safe choice for now
+
+
+// Other stuff
+$link-color: $eggplant-2;
+$card-bg: $rich-black;
+$table-hover-bg: $eggplant-2;
+$table-bg: $rich-black;
+$table-header-bg: $eggplant;
+
+
+/*-- scss:rules --*/
+
+
+
+p {
+    line-height: 1.6;
+}
+
+p.subtitle {
+  color: $eggplant-2 !important;
+}
+
+h2 {
+  border-bottom: none;
+}
+
+// Index page hero image
+.rounded {
+  display: flex;
+  align-items: center;
+}
+
+// About page image 
+.about-page-image {
+  img {
+    max-height: 600px;
+    height: auto;
+    width: auto;
+    border-radius: 8px;
+    @media (max-width: 768px) {
+      max-height: 100%;
+    }
+  }
+}
+
+// Fig caption (only used @ about page atm)
+figcaption {
+  font-size: 0.8em;
+  text-align: center;
+  padding: 0;
+  margin: 0 !important;
+}
+
+// Cards - includes grid listing cards 
+.card {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  h4 {
+    text-align: center;
+  }
+  
+  a {
+    color: $primary-color;
+    }
+}
+
+// Aside
+// - Looks cool but I didn't use it yet
+.about-aside {
+  // float: right;
+  width: auto; 
+  margin: 0 0rem 1rem 0;
+  padding: 1rem;
+  background: #222;
+  color: white;
+  border-radius: 8px;
+
+  img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+}
+
+.about-aside-links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20pt !important;
+}
+
+// Definition lists (used in about page)
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+dt {
+  flex: 1;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+dd {
+  flex: 1;
+  text-align: right;
+  margin: 0;
+}
+
+dl + p {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.about-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+iconify-icon {
+  font-size: 40px; /* Adjust the size as needed */
+  padding: 1rem;
+}
+
+
+.list.grid.quarto-listing-cols-3 {
+  margin-top: 1rem;
+  padding-top: 0rem;
+  margin-bottom: 2rem;
+  grid-template-columns: auto auto auto;
+
+}
+
+.quarto-listing-table {
+  @extend .table !optional;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  // change hover color
+  
+  th,
+  td {
+    padding: 12px 15px !important;
+    text-align: left !important;
+  }
+
+  thead {
+    th {
+      background-color: $table-header-bg !important;
+      color: $table-header-color;
+      letter-spacing: 0.03em !important;
+      font-weight: bold !important;
+      border-bottom: 0;
+    }
+  }
+
+  tbody {
+    td {
+      border-bottom: 1px solid $eggplant-2 !important;
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+    }
+
+    tr:last-child td {
+      border-bottom: none !important;
+    }
+  }
+
+  // Style for the "post one" title
+  td:first-child {
+    color: $primary-color !important;
+    font-weight: bold !important;
+  }
+
+  // Align the "Reading Time" column to the right
+  td:last-child {
+    text-align: right !important;
+  }
+}
+
+div.card.g-col-4 {
+  gap: 2rem;
+  padding: 0;
+  margin: 2rem;
+}
+
+.grid {
+  margin-bottom: 2rem;
+  max-width: 100%;
+  box-sizing: border-box; 
+  .g-col-12,
+  .g-col-9,
+  .g-col-6,
+  .g-col-3 {
+    padding: 1.5rem;
+    background-color: $rich-black;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+ 
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(12, 1fr);
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    .g-col-9,
+    .g-col-3 {
+      grid-column: span 12;
+    }
+  }
+}
+
+.fa-solid {
+  color: $primary-color;
+  size: 3em;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ($link-color, 25%);
+    text-decoration: underline;
+  }
+}
+
+i {
+  color: $link-color;
+}
+
+
+.navbar {
+  background: none;
+
+  .navbar-brand {
+    color: $eggplant-2;
+    padding-left: 1rem;
+    padding-right: 2rem;
+  }
+
+  .nav-link {
+    color: $secondary-color !important;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: lighten($theme-background-color, 50%);
+    }
+  }
+}
+
+.navbar-container {
+  width: min-content;
+  background-color: $rich-black; 
+  border-radius: 8px;
+}
+
+.collapse .navbar-collapse{
+  color: $secondary-color !important;
+}
+
+// pad the right side of search icon
+// match the padding on left side navbar brand
+.type-overlay {
+  padding-right: 0.5rem;
+}
+
+div.quarto-about-solana .about-entity .about-link {
+  border: none;
+  font-size: 1.25rem;
+  padding: 0;
+}
+
+body {
+  color: $text-color;
+}
+
+.index-console {
+  font-family: monospace, monospace;
+  color: $eggplant-2;
+}
+
+// simple inline button 
+.btn {
+  background-color: $rich-black;
+  color: $eggplant-2;
+  border: none;
+  border-radius: 0px;
+  padding: 0rem 1rem;
+  margin-top: 0px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  // justify text left 
+  text-align: left;
+  &:hover {
+    background-color: darken($eggplant, 10%);
+  }
+}
+
+.console-ul {
+  list-style: none;
+  display: block;
+}
+.console-li {
+  display: block;
+}
