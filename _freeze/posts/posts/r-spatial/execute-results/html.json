@@ -1,0 +1,17 @@
+{
+  "hash": "621d6d23ab68fc54ab21d1568fe5906e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Spatial\n\n## Coordinates and points\n\nTags: `plot` `point` `gps` `location`\n\nAdd a single coordinate, like if you wanted to add one or more locations to a map\nplot ad-hoc. \n\n\n::: {.cell}\n\n```{.r .cell-code}\nbendigo <- c(-36.7596, 144.2786)\n\ndf <- data.frame(x = bendigo[2], y = bendigo[1])\nbendigo <- sf::st_as_sf(df, coords = c(\"x\", \"y\"), crs = 4326) |>\n  sf::st_transform(3577)\n\n# make this a simple feature with name Bendigo and geometry\nbendigo <- bendigo |>\n  dplyr::mutate(name = \"Bendigo\")\n```\n:::\n\n\n---\n\n## Creating rasters based on rulesets\n\n### Categorical rasters\n\nCombine two categorical rasters by concatenating their levels:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nr <- terra::rast(nrows = 10, ncols = 10)\nterra::values(r) <- sample(3, terra::ncell(r), replace = TRUE)\nlevels(r) <- data.frame(id = 1:3, cover = c(\"forest\", \"water\", \"urban\"))\nterra::plot(r)\n```\n\n::: {.cell-output-display}\n![](r-spatial_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n\n```{.r .cell-code}\nrr <- terra::rast(r)\nterra::values(rr) <- sample(1:3, terra::ncell(rr), replace = TRUE)\nlevels(rr) <- data.frame(id = c(1:3), color = c(\"red\", \"green\", \"blue\"))\nterra::plot(rr)\n```\n\n::: {.cell-output-display}\n![](r-spatial_files/figure-html/unnamed-chunk-2-2.png){width=672}\n:::\n\n```{.r .cell-code}\nx <- terra::concats(r, rr)\nterra::levels(x)[[1]]\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n  ID  cover_color\n1  0   forest_red\n2  1 forest_green\n3  2  forest_blue\n4  3    water_red\n5  4  water_green\n6  5   water_blue\n7  6    urban_red\n8  7  urban_green\n9  8   urban_blue\n```\n\n\n:::\n\n```{.r .cell-code}\nterra::plot(x)\n```\n\n::: {.cell-output-display}\n![](r-spatial_files/figure-html/unnamed-chunk-2-3.png){width=672}\n:::\n:::",
+    "supporting": [
+      "r-spatial_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,61 @@
+---
+title: "Andrew Schwenke, PhD"
+pagetitle: "Andrew Schwenke, PhD"
+
+about:
+  template: solana
+  id: hero-heading
+  image: ./assets/img/DALL-E_a-fox-eating-noodles-in-blade-runner-1982.png
+  image-width: 22em
+  image-shape: rounded
+  links:
+    - icon: github
+      aria-label: GitHub
+      href: https://github.com/andrew-1234
+    - icon: linkedin
+      aria-label: LinkedIn
+      href: https://www.linkedin.com/in/andrew-schwenke-475288a9/
+    - text: "{{< ai orcid >}}"
+      href: https://orcid.org/0000-0002-5281-0115
+format:
+  html:
+    page-layout: full
+listing: 
+  - id: projects
+    contents: 
+      - "posts/projects/*/index.qmd"
+    type: grid 
+    date-format: full
+    fields: [title, author, description, reading-time]
+    table-hover: true
+    sort-ui: false
+    filter-ui: false
+---
+
+::: {#hero-heading}
+
+I'm Andrew. I like programming and bossa nova.
+
+
+::: {.index-console}
+
+[What is this place?]{style="color: #764c6aff;"}
+<br/>
+
+[> &emsp; Somewhere to share my notes and what I'm working on.]{style="color:
+#764c6aff;"} <br/>
+
+Do something?
+
+[> &emsp; \[ learn more /about me \]](about.qmd)<br/>
+[> &emsp; \[ take me to /posts\]](./posts/posts/)<br/>
+[> &emsp; \[ take me to /projects \]](./posts/posts/)<br/>
+
+:::
+:::
+<!-- hero-heading -->
+
+## Recent Projects
+
+::: {#projects}
+:::

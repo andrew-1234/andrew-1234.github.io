@@ -1,0 +1,16 @@
+# Colours
+
+Tags: `colours` `palettes` `ggplot2` `colors`
+
+Colours and colour palettes. 
+
+```{r}
+library(paletteer)
+pal_orange <- paletteer_d("ggsci::deep_orange_material", 10)
+pal_dy <- paletteer_c("grDevices::Dynamic", 16)
+pal_gr <- paletteer_c("grDevices::Grays", 12)
+
+pal_ter <- paletteer_c("grDevices::Terrain 2", 16)
+# Reverse
+pal_red <- paletteer_c("grDevices::Reds 3", 12, -1)
+```

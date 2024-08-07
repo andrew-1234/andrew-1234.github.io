@@ -1,0 +1,115 @@
+---
+title: "Andrew Schwenke"
+---
+
+::: {.grid}
+
+::: {.g-col-8}
+
+* Quantitative ecologist and software developer. I like to work on software and
+data solutions that can solve environmental challenges and support research. 
+
+* Over ten years of experience with the R programming language. I excel in using
+data to uncover insights into systems, such as environmental effects on animal
+behaviours and species distributions.
+
+* My current focus is expanding my skill set by learning computer science
+and different tech stacks, including Go, Typescript, React + Django +
+PostgreSQL stack, and Ruby. 
+
+<!-- Put my posters up - symposium one is cool  -->
+
+::: {.card .g-col-4}
+::: {.h4}
+[Take a look at my projects &rarr;](posts/projects/index.qmd)
+:::
+:::
+
+::: {.card .g-col-4}
+::: {.h4}
+[Take a look at my posts and notes &rarr;](posts/posts/index.qmd)
+:::
+:::
+
+:::
+
+::: {.g-col-4}
+
+::: {.about-page-image}
+![Serra do Cipó, Brazil](./assets/img/20220930_112348.jpg)
+:::
+:::
+:::
+ 
+---
+
+### Skills 
+
+**Programming Languages**
+
+::: {.about-icons}
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<iconify-icon icon="vscode-icons:file-type-r"></iconify-icon>
+<iconify-icon icon="vscode-icons:file-type-python"></iconify-icon>
+<iconify-icon icon="vscode-icons:file-type-go"></iconify-icon>
+<iconify-icon icon="vscode-icons:file-type-ruby"></iconify-icon>
+<iconify-icon icon="vscode-icons:file-type-shell"></iconify-icon>
+<iconify-icon icon="vscode-icons:file-type-sql"></iconify-icon>
+<iconify-icon icon="vscode-icons:file-type-html"></iconify-icon>
+<iconify-icon icon="vscode-icons:file-type-css"></iconify-icon> 
+:::
+
+**Tools and Frameworks** 
+:    
+
+Git, UNIX/Linux terminal, Jupyter, Quarto, R Shiny, QGIS, Docker, CI/CD, Nextflow, Jira, $\LaTeX$
+
+**Languages** 
+: 
+
+English (native), Portuguese (proficient)
+
+### Education
+  
+Doctor of Philosophy - Ecology
+ ~ Feb 2017 - Jun 2022
+
+Thesis title: Evolution of intra and intersexual signalling in two species of frogs in the *Litoria lesueuri* species group.
+
+Master of Applied Science by Research - Ecology
+ ~ Mar 2015 - Sep 2016
+
+Thesis title: Riparian vegetation condition influences movement and microhabitat
+use by *Mixophyes fasciolatus* in South East Queensland.
+
+Bachelor of Applied Science - Ecology and Environmental Science (Distinction)
+ ~ 2012 - 2014
+
+### Publications
+
+- Lemon D., Fitch P., and Schwenke A. (2024). A Data Assessment Framework for Data Users. CSIRO, Australia
+
+- Kellie, D., Kar, F., Balasubramaniam, S., Schneider, M., Schwenke, A., Torresan, 0., Waite, C., Fenker, J., Westgate, M. (2024). Cleaning Biodiversity Data in R. (Version 0.1.0). <https://atlasoflivingaustralia.github.io/cleaning_data/)>
+
+- Clemens, R., Schwenke, A., Bayraktarov, E. and Laffan, S.W. (2023) The sensitivity of species distribution models to new data and the utility of putting uncertainty on the map. 25th International Congress on Modelling and Simulation, <https://doi.org/10.36334/modsim.2023.clemens>
+  
+- Harris, Colin, Bromley, Emma, Clarke, Linda K., Kay, Bianca J., Schwenke, Andrew C., & Clarke, Anthony R. (2022) Conservation biological control of the fruit fly parasitoid *Fopiusa arisanus* (Hymenoptera: Braconidae). Austral Entomology, 61(3), pp. 340-349.
+
+## Presentations and Posters
+
+Poster presentation: Advertisement call variation in *Litoria wilcoxii* and *L. jungguy*.
+~ 2022
+
+- Schwenke, A., D. Hurwood & S. Fuller. Ecoacoustics Symposium, Brisbane, QLD.
+
+Speed talk: Evolution of acoustic communication in two species of frogs in the *Litoria lesueuri* <br/>species group
+ ~ 2020
+
+
+- Schwenke, A., D. Hurwood & S. Fuller. Ecological Society of Australia. Online.
+
+Poster presentation: Evolution of intra and intersexual signalling in the *Litoria lesueuri*<br/> species group.
+~ 2018
+
+- Schwenke, A., D. Hurwood & S. Fuller. Australian Society of Herpetologists. Kindilan, QLD.
+

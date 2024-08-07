@@ -1,0 +1,44 @@
+# Spatial
+
+## Coordinates and points
+
+Tags: `plot` `point` `gps` `location`
+
+Add a single coordinate, like if you wanted to add one or more locations to a map
+plot ad-hoc. 
+
+```{r} 
+bendigo <- c(-36.7596, 144.2786)
+
+df <- data.frame(x = bendigo[2], y = bendigo[1])
+bendigo <- sf::st_as_sf(df, coords = c("x", "y"), crs = 4326) |>
+  sf::st_transform(3577)
+
+# make this a simple feature with name Bendigo and geometry
+bendigo <- bendigo |>
+  dplyr::mutate(name = "Bendigo")
+```
+
+---
+
+## Creating rasters based on rulesets
+
+### Categorical rasters
+
+Combine two categorical rasters by concatenating their levels:
+
+```{r}
+r <- terra::rast(nrows = 10, ncols = 10)
+terra::values(r) <- sample(3, terra::ncell(r), replace = TRUE)
+levels(r) <- data.frame(id = 1:3, cover = c("forest", "water", "urban"))
+terra::plot(r)
+
+rr <- terra::rast(r)
+terra::values(rr) <- sample(1:3, terra::ncell(rr), replace = TRUE)
+levels(rr) <- data.frame(id = c(1:3), color = c("red", "green", "blue"))
+terra::plot(rr)
+
+x <- terra::concats(r, rr)
+terra::levels(x)[[1]]
+terra::plot(x)
+```

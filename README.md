@@ -1,2 +1,5 @@
-# andrew-1234.github.io
-Visit my website for details about me and what I'm working on. 
+# Project structure
+
+* Notebooks are kept in a flat structure
+* Data is stored in the `data` folder if needed, with matching project prefix.
+* Gists are short form scripts or code snippets

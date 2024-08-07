@@ -1,0 +1,20 @@
+---
+title: "Projects"
+pagetitle: "Projects"
+subtitle: "Projects"
+listing:
+  - id: projects 
+    contents:
+      - "./*/index.qmd"
+    type: table
+    date-format: full
+    fields: [title, author, description, reading-time]
+    table-hover: true
+    sort-ui: false
+    filter-ui: false
+
+
+---
+
+::: {#projects}
+:::

@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+freeze: true
+website:
+  title: "[andrew-1234] $"
+  site-url: http://default.com
+  description: "thisisawebsite"
+  navbar:
+    collapse: true
+    pinned: true
+    collapse-below: md
+    right:
+      - href: about.qmd
+        text: /about
+      - href: posts/posts/index.qmd
+        text: /posts 
+      - href: posts/projects/index.qmd
+        text: /projects
+  page-footer:
+    right: 
+      - icon: github
+        href: https://github.com/andrew-1234
+      - icon: linkedin
+        href: https://www.linkedin.com/in/andrew-schwenke-475288a9/
+format:
+  html:
+    theme: 
+      - Cyborg
+      - custom.scss
+    code-link: true
+    lightbox: true
+
+# &#8729; is the unicode for a bullet point - good separator 

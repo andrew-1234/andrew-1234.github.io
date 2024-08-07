@@ -1,0 +1,35 @@
+[
+  {
+    "listing": "/posts/projects/index.html",
+    "items": [
+      "/posts/projects/call-evolution/index.html",
+      "/posts/projects/gdm/index.html",
+      "/posts/projects/hoot-sdm/index.html",
+      "/posts/projects/imgsorter/index.html",
+      "/posts/projects/mixophyes-movement/index.html",
+      "/posts/projects/shimmy/index.html",
+      "/posts/projects/trem/index.html",
+      "/posts/projects/tripl3slicer/index.html"
+    ]
+  },
+  {
+    "listing": "/posts/posts/index.html",
+    "items": [
+      "/posts/posts/r-colours.html",
+      "/posts/posts/r-spatial.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/projects/call-evolution/index.html",
+      "/posts/projects/gdm/index.html",
+      "/posts/projects/hoot-sdm/index.html",
+      "/posts/projects/imgsorter/index.html",
+      "/posts/projects/mixophyes-movement/index.html",
+      "/posts/projects/shimmy/index.html",
+      "/posts/projects/trem/index.html",
+      "/posts/projects/tripl3slicer/index.html"
+    ]
+  }
+]
