@@ -1,25 +1,71 @@
 ---
-title: "Your Project Title"
-description: "A brief description of your project."
-author: "Your Name"
+title: "Shimmy - A window positioning tool for macOS"
+description: |
+  Shimmy is a lightweight utility for users who need precise control over window
+  positions, allowing directional adjustments using global keyboard shortcuts.
+  </br> Stack: `Go` `C` 
+author: "Andrew Schwenke"
 ---
 
-# Introduction
+You can explore the project and its code on
+[GitHub](https://github.com/andrew-1234/shimmy).
 
-This is a dummy project page. You can replace this text with an introduction to your project.
+## Project Summary
 
-# Methodology
+**Shimmy** is a lightweight utility designed for macOS users who need quick and
+precise control over their window positions. It allows users to nudge windows in
+any direction using customisable global keyboard shortcuts. Unlike full-fledged
+window management tools, Shimmy focuses on providing simple directional
+adjustments, making it a perfect companion to other window management solutions.
 
-Describe the methods you used in your project here.
+## Technical Stack
 
-# Results
+- **Programming Languages:** Go, C
+- **Build Pipeline** Github Workflows, Make
+- **Platform:** macOS
+- **Additional Requirements:** C Compiler
 
-Present your results here. You can use figures, tables, and other visual aids to help illustrate your findings.
+## Key Features
 
-# Conclusion
+* **Directional Window Movement:** Easily move active windows in any direction
+using the keyboard.
+* **Customisable Shortcuts:** Configure movement distance with the `-p` flag,
+allowing for fine-tuned control.
+* **Foreground and Background Operation:** Shimmy can run in the foreground or
+as a background process, making it flexible for different use cases.
+* **Future Enhancements:** Plans to add support for custom keybindings and to
+run as a menu bar app for more seamless integration.
 
-Summarize your findings and discuss their implications here.
+## Challenges and Solutions
 
-# References
+Developing a tool that interacts with macOS's window management using only
+keyboard shortcuts required overcoming challenges related to native system
+integration.
 
-List any references you used in your project here.
+Go was chosen for its simplicity and performance, making it ideal for creating
+lightweight tools like Shimmy. However, Go's cross-platform nature doesn't
+natively support macOS-specific window management functions. 
+
+To bridge this gap, the cgo package was used to integrate C code into the Go
+project. This allowed me to utilise Apple’s native C libraries for enabling
+precise control over window positioning, while maintaining the efficiency and
+ease of development provided by Go.
+
+## Usage
+
+1. Clone the repository and build the binary using `go build`.
+2. Run the binary with options to control window movements.
+3. Example command, setting the movement distance to 10 pixels: 
+   ```sh
+   ./shimmy -p 10
+   ```
+
+## Future Development
+
+Shimmy’s development roadmap includes features like customisable keybindings and running as a menu bar application for even easier access and usability.
+
+## Related Projects
+
+* Rectangle: A comprehensive window management app for macOS.
+
+

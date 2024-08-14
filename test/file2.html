@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Social Preview</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0d1117;
+      /* GitHub dark theme background */
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    }
+
+    .preview-container {
+      width: 1280px;
+      height: 640px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-card {
+      background-color: #161b22;
+      /* Slightly lighter than the background */
+      border-radius: 16px;
+      padding: 30px 30px;
+      color: #c9d1d9;
+      width: 800px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-title {
+      color: #58a6ff;
+      font-size: 48px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .project-description {
+      font-size: 24px;
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 40px;
+    }
+
+    .tech-stack {
+      flex-grow: 1;
+    }
+
+    .tech-item {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .tech-name {
+      color: #58a6ff;
+    }
+
+    .author-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-left: 20px;
+      overflow: hidden;
+    }
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .author-name {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="preview-container">
+    <div class="project-card">
+      <h1 class="project-title">Boj job</h1>
+      <p class="project-description">Easy job searching tool</p>
+      <div class="card-footer">
+        <div class="tech-stack">
+          <div class="tech-item">
+            <span class="tech-name">JavaScript:</span>
+            <span class="tech-percentage">43.86%</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-name">CSS:</span>
+            <span class="tech-percentage">29.00%</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-name">HTML:</span>
+            <span class="tech-percentage">27.15%</span>
+          </div>
+        </div>
+        <div class="author-info">
+          <span class="author-name">andrew-1234</span>
+          <div class="author-avatar">
+            <img src="./DALL-E_a-fox-eating-noodles-in-blade-runner-1982.png" alt="Author avatar">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

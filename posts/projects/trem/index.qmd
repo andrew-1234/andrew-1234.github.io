@@ -1,25 +1,80 @@
 ---
-title: "Your Project Title"
-description: "A brief description of your project."
-author: "Your Name"
+title: "Trem - Threads style note taking"
+description: |
+  Trem is a full stack web application for capturing notes as trains of
+  thoughts. </br> 
+  Stack: `Python` `TypeScript` `Django Ninja` `PostgreSQL` `React`
+author: "Andrew Schwenke"
 ---
 
-# Introduction
 
-This is a dummy project page. You can replace this text with an introduction to your project.
+* Visit the [GitHub repository](https://github.com/andrew-1234/trem)
+* See the demo application deployed [here](https://trem-bxwv.onrender.com) 
+ 
+## Project Summary
 
-# Methodology
+Trem (noun)
 
-Describe the methods you used in your project here.
+1.	(*Brazil*) train
+2.	(*Minas Gerais, slang*): a thing, anything (except a train)
 
-# Results
+**Trem** is a note-taking application designed to help users organise their
+thoughts in a threaded manner. Inspired by the concept of a "train of thought,"
+Trem allows users to link related notes into threads, making it easy to trace
+the evolution of ideas over time. This structure mimics the flow of a personal
+conversation, enabling deeper exploration of topics and better organisation of
+complex ideas. Note that Trem is under the development phase and is not yet
+ready for production use.
 
-Present your results here. You can use figures, tables, and other visual aids to help illustrate your findings.
+## Technical Stack
 
-# Conclusion
+* **Programming Languages:** Python, TypeScript
+* **Frameworks:** Django (backend), React (frontend)
+* **Database:** Postgres 
+* **Build Tools:** Bash scripts for development tasks
+* **ASGI Server:** Gunicorn with Uvicorn workers for deploying and supporting asynchronous capabilities
 
-Summarize your findings and discuss their implications here.
+## Key Features
 
-# References
+* **Threaded Notes:** Organise your notes into threads, allowing for easy navigation and logical grouping of related ideas.
+* **Tagging System:** Apply tags to notes for cross-referencing ideas across different threads.
+* **Incremental Writing Support:** Encourages revisiting and expanding notes, fostering gradual development of complex concepts.
 
-List any references you used in your project here.
+## Challenges and Solutions
+
+Building a robust note-taking application like Trem required careful
+consideration of both frontend and backend integration. The choice of Django for
+the backend was made to leverage its strong ORM capabilities, which are
+well-suited for managing complex relational data like threaded notes. React was
+chosen for the frontend to provide a dynamic and responsive user interface.
+
+## Usage
+
+To start using Trem locally:
+
+1. Clone the repository and navigate to the project directory.
+2. Build the project using the `./build.sh` script.
+3. Start the application using `python -m gunicorn trem.asgi:application -k uvicorn.workers.UvicornWorker`.
+
+## Future Development
+
+Future plans for Trem include adding features like thread linking and enhanced tag management. These additions will provide users with more powerful tools to create and manage complex knowledge networks.
+
+You can explore the project further on [GitHub](https://github.com/andrew-1234/trem).
+
+**For more on incremental writing, see:**  
+
+* [Evergreen notes permit smooth incremental progress in writing (“incremental writing”)](https://notes.andymatuschak.org/Evergreen_notes_permit_smooth_incremental_progress_in_writing_(%E2%80%9Cincremental_writing%E2%80%9D))
+
+**Zettelkasten method resources:**  
+
+* [Introduction to the Zettelkasten Method](https://zettelkasten.de/overview/) -
+A comprehensive guide to understanding the Zettelkasten method.
+* [Build your own second brain with the Zettelkasten
+method](https://www.atlassian.com/blog/productivity/zettelkasten-method) - How
+to apply Zettelkasten in today’s digital age.
+* [Detailed Guide on the Zettelkasten
+System](https://theproductiveengineer.net/how-to-use-the-zettelkasten-system-a-detailed-guide/) - An in-depth explanation of the Zettelkasten method and its principles.
+
+
+

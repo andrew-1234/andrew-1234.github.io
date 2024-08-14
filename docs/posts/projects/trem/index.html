@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your Name">
-<meta name="description" content="A brief description of your project.">
+<meta name="author" content="Andrew Schwenke">
+<meta name="description" content="Trem is a full stack web application for capturing notes as trains of thoughts.  Stack: Python TypeScript Django Ninja PostgreSQL React">
 
-<title>[andrew-1234] $ - Your Project Title</title>
+<title>[andrew-1234] $ - Trem - Threads style note taking</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,12 +116,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Your Project Title</h1>
+<h1 class="title">Trem - Threads style note taking</h1>
 </div>
 
 <div>
   <div class="description">
-    A brief description of your project.
+    <p>Trem is a full stack web application for capturing notes as trains of thoughts. <br> Stack: <code>Python</code> <code>TypeScript</code> <code>Django Ninja</code> <code>PostgreSQL</code> <code>React</code></p>
   </div>
 </div>
 
@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Your Name </p>
+             <p>Andrew Schwenke </p>
           </div>
   </div>
     
@@ -144,25 +144,64 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>This is a dummy project page. You can replace this text with an introduction to your project.</p>
+<ul>
+<li>Visit the <a href="https://github.com/andrew-1234/trem">GitHub repository</a></li>
+<li>See the demo application deployed <a href="https://trem-bxwv.onrender.com">here</a></li>
+</ul>
+<section id="project-summary" class="level2">
+<h2 class="anchored" data-anchor-id="project-summary">Project Summary</h2>
+<p>Trem (noun)</p>
+<ol type="1">
+<li>(<em>Brazil</em>) train</li>
+<li>(<em>Minas Gerais, slang</em>): a thing, anything (except a train)</li>
+</ol>
+<p><strong>Trem</strong> is a note-taking application designed to help users organise their thoughts in a threaded manner. Inspired by the concept of a “train of thought,” Trem allows users to link related notes into threads, making it easy to trace the evolution of ideas over time. This structure mimics the flow of a personal conversation, enabling deeper exploration of topics and better organisation of complex ideas. Note that Trem is under the development phase and is not yet ready for production use.</p>
 </section>
-<section id="methodology" class="level1">
-<h1>Methodology</h1>
-<p>Describe the methods you used in your project here.</p>
+<section id="technical-stack" class="level2">
+<h2 class="anchored" data-anchor-id="technical-stack">Technical Stack</h2>
+<ul>
+<li><strong>Programming Languages:</strong> Python, TypeScript</li>
+<li><strong>Frameworks:</strong> Django (backend), React (frontend)</li>
+<li><strong>Database:</strong> Postgres</li>
+<li><strong>Build Tools:</strong> Bash scripts for development tasks</li>
+<li><strong>ASGI Server:</strong> Gunicorn with Uvicorn workers for deploying and supporting asynchronous capabilities</li>
+</ul>
 </section>
-<section id="results" class="level1">
-<h1>Results</h1>
-<p>Present your results here. You can use figures, tables, and other visual aids to help illustrate your findings.</p>
+<section id="key-features" class="level2">
+<h2 class="anchored" data-anchor-id="key-features">Key Features</h2>
+<ul>
+<li><strong>Threaded Notes:</strong> Organise your notes into threads, allowing for easy navigation and logical grouping of related ideas.</li>
+<li><strong>Tagging System:</strong> Apply tags to notes for cross-referencing ideas across different threads.</li>
+<li><strong>Incremental Writing Support:</strong> Encourages revisiting and expanding notes, fostering gradual development of complex concepts.</li>
+</ul>
 </section>
-<section id="conclusion" class="level1">
-<h1>Conclusion</h1>
-<p>Summarize your findings and discuss their implications here.</p>
+<section id="challenges-and-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="challenges-and-solutions">Challenges and Solutions</h2>
+<p>Building a robust note-taking application like Trem required careful consideration of both frontend and backend integration. The choice of Django for the backend was made to leverage its strong ORM capabilities, which are well-suited for managing complex relational data like threaded notes. React was chosen for the frontend to provide a dynamic and responsive user interface.</p>
 </section>
-<section id="references" class="level1">
-<h1>References</h1>
-<p>List any references you used in your project here.</p>
+<section id="usage" class="level2">
+<h2 class="anchored" data-anchor-id="usage">Usage</h2>
+<p>To start using Trem locally:</p>
+<ol type="1">
+<li>Clone the repository and navigate to the project directory.</li>
+<li>Build the project using the <code>./build.sh</code> script.</li>
+<li>Start the application using <code>python -m gunicorn trem.asgi:application -k uvicorn.workers.UvicornWorker</code>.</li>
+</ol>
+</section>
+<section id="future-development" class="level2">
+<h2 class="anchored" data-anchor-id="future-development">Future Development</h2>
+<p>Future plans for Trem include adding features like thread linking and enhanced tag management. These additions will provide users with more powerful tools to create and manage complex knowledge networks.</p>
+<p>You can explore the project further on <a href="https://github.com/andrew-1234/trem">GitHub</a>.</p>
+<p><strong>For more on incremental writing, see:</strong></p>
+<ul>
+<li><a href="https://notes.andymatuschak.org/Evergreen_notes_permit_smooth_incremental_progress_in_writing_(%E2%80%9Cincremental_writing%E2%80%9D)">Evergreen notes permit smooth incremental progress in writing (“incremental writing”)</a></li>
+</ul>
+<p><strong>Zettelkasten method resources:</strong></p>
+<ul>
+<li><a href="https://zettelkasten.de/overview/">Introduction to the Zettelkasten Method</a> - A comprehensive guide to understanding the Zettelkasten method.</li>
+<li><a href="https://www.atlassian.com/blog/productivity/zettelkasten-method">Build your own second brain with the Zettelkasten method</a> - How to apply Zettelkasten in today’s digital age.</li>
+<li><a href="https://theproductiveengineer.net/how-to-use-the-zettelkasten-system-a-detailed-guide/">Detailed Guide on the Zettelkasten System</a> - An in-depth explanation of the Zettelkasten method and its principles.</li>
+</ul>
 
 
 </section>

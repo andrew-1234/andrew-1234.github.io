@@ -1,7 +1,6 @@
 ---
 title: "Projects"
 pagetitle: "Projects"
-subtitle: "Projects"
 listing:
   - id: projects 
     contents:
@@ -12,6 +11,7 @@ listing:
     table-hover: true
     sort-ui: false
     filter-ui: false
+    max-description-length: 300
 
 
 ---

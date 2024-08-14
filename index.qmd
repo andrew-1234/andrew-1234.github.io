@@ -1,7 +1,6 @@
 ---
-title: "Andrew Schwenke, PhD"
-pagetitle: "Andrew Schwenke, PhD"
-
+title: "Andrew Schwenke"
+pagetitle: "Andrew Schwenke"
 about:
   template: solana
   id: hero-heading
@@ -34,24 +33,32 @@ listing:
 
 ::: {#hero-heading}
 
-I'm Andrew. I like programming and bossa nova.
 
+::: {.card .index-console}
 
-::: {.index-console}
+andrew-1234\@home:~$ [Who am I?]{style="color: rgba(255, 255, 255,
+0.622);"} 
 
-[What is this place?]{style="color: #764c6aff;"}
-<br/>
+<p> [I'm Andrew. I like programming and
+ecology.]{style="color: rgba(255, 255, 255, 0.822);"}</p>
 
-[> &emsp; Somewhere to share my notes and what I'm working on.]{style="color:
-#764c6aff;"} <br/>
+---
 
-Do something?
+andrew-1234\@home:~$ [What is this place?]{style="color: rgba(255, 255, 255,
+0.622);"}
 
-[> &emsp; \[ learn more /about me \]](about.qmd)<br/>
-[> &emsp; \[ take me to /posts\]](./posts/posts/)<br/>
-[> &emsp; \[ take me to /projects \]](./posts/posts/)<br/>
+<p> [Somewhere to share my notes and what I'm working on]{style="color:
+rgba(255, 255, 255, 0.822);"} </p>
+---
+andrew-1234\@home:~$
+[learn more [-about]{style="color: #f3125fff;"} me](about.qmd)<br/>
+andrew-1234\@home:~$
+[go to [-posts]{style="color: #f3125fff;"}](./posts/posts)<br/>
+andrew-1234\@home:~$
+[go to [-projects]{style="color: #f3125fff;"}](./posts/projects)<br/>
 
 :::
+
 :::
 <!-- hero-heading -->
 

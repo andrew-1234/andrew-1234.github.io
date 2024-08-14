@@ -30,30 +30,30 @@
   {
     "objectID": "posts/projects/hoot-sdm/index.html",
     "href": "posts/projects/hoot-sdm/index.html",
-    "title": "Your Project Title",
+    "title": "The Australian Acoustic Observatory, Hoot Detective, & the impact of good data on Species Distribution Models",
     "section": "",
-    "text": "Introduction\nThis is a dummy project page. You can replace this text with an introduction to your project.\n\n\nMethodology\nDescribe the methods you used in your project here.\n\n\nResults\nPresent your results here. You can use figures, tables, and other visual aids to help illustrate your findings.\n\n\nConclusion\nSummarize your findings and discuss their implications here.\n\n\nReferences\nList any references you used in your project here."
+    "text": "Published in:"
   },
   {
     "objectID": "posts/projects/index.html",
     "href": "posts/projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Title\n\n\nAuthor\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\n\nNo matching items"
+    "text": "Title\n\n\nAuthor\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nHarnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species\n\n\nAndrew Schwenke\n\n\nA case study using acoustic monitoring data to model changes in avian species composition within the Mulga Lands bioregion of Queensland. \n\n\n7 min\n\n\n\n\nJob Searching Tool\n\n\nAndrew Schwenke\n\n\nA query builder for advanced job searches. Built with plain HTML CSS JavaScript \n\n\n1 min\n\n\n\n\nThe Australian Acoustic Observatory, Hoot Detective, & the impact of good data on Species Distribution Models\n\n\nDr Andrew Schwenke, Dr Rob Clemens\n\n\nA case study demonstrating the use of open access acoustic data and citizen science annotations to model Owl species distributions. \n\n\n10 min\n\n\n\n\nTrem - Threads style note taking\n\n\nYour Name\n\n\nTrem is a full stack web application for capturing notes as trains of thoughts.  Stack: Python, TypeScript, Django Ninja, PostgreSQL, React \n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\nYour Project Title\n\n\nYour Name\n\n\nA brief description of your project.\n\n\n1 min\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/projects/trem/index.html",
     "href": "posts/projects/trem/index.html",
-    "title": "Your Project Title",
+    "title": "Trem - Threads style note taking",
     "section": "",
-    "text": "Introduction\nThis is a dummy project page. You can replace this text with an introduction to your project.\n\n\nMethodology\nDescribe the methods you used in your project here.\n\n\nResults\nPresent your results here. You can use figures, tables, and other visual aids to help illustrate your findings.\n\n\nConclusion\nSummarize your findings and discuss their implications here.\n\n\nReferences\nList any references you used in your project here."
+    "text": "Visit the GitHub repository\nSee the demo application deployed here"
   },
   {
     "objectID": "posts/projects/gdm/index.html",
     "href": "posts/projects/gdm/index.html",
-    "title": "Your Project Title",
+    "title": "Harnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species",
     "section": "",
-    "text": "Introduction\nThis is a dummy project page. You can replace this text with an introduction to your project.\n\n\nMethodology\nDescribe the methods you used in your project here.\n\n\nResults\nPresent your results here. You can use figures, tables, and other visual aids to help illustrate your findings.\n\n\nConclusion\nSummarize your findings and discuss their implications here.\n\n\nReferences\nList any references you used in your project here."
+    "text": "Published in:"
   },
   {
     "objectID": "posts/posts/r-colours.html",
@@ -88,7 +88,7 @@
     "href": "posts/posts/index.html",
     "title": "Posts",
     "section": "",
-    "text": "Title\n\n\nAuthor\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nColours\n\n\n \n\n\n\n\n\n1 min\n\n\n\n\nSpatial\n\n\n \n\n\n\n\n\n1 min\n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "Title\n\n\nAuthor\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nColours\n\n\n \n\n\n\n\n\n1 min\n\n\n\n\nSpatial\n\n\n \n\n\n\n\n\n1 min\n\n\n\n\nSpatial\n\n\n \n\n\n\n\n\n1 min\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/projects/tripl3slicer/index.html",
@@ -100,9 +100,9 @@
   {
     "objectID": "posts/projects/shimmy/index.html",
     "href": "posts/projects/shimmy/index.html",
-    "title": "Your Project Title",
+    "title": "Shimmy - A window positioning tool for macOS",
     "section": "",
-    "text": "Introduction\nThis is a dummy project page. You can replace this text with an introduction to your project.\n\n\nMethodology\nDescribe the methods you used in your project here.\n\n\nResults\nPresent your results here. You can use figures, tables, and other visual aids to help illustrate your findings.\n\n\nConclusion\nSummarize your findings and discuss their implications here.\n\n\nReferences\nList any references you used in your project here."
+    "text": "You can explore the project and its code on GitHub."
   },
   {
     "objectID": "posts/projects/imgsorter/index.html",
@@ -128,15 +128,253 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Andrew Schwenke, PhD",
+    "title": "Andrew Schwenke",
     "section": "",
-    "text": "I’m Andrew. I like programming and bossa nova.\n\nWhat is this place? \n&gt;   Somewhere to share my notes and what I’m working on. \nDo something?\n&gt;   [ learn more /about me ] &gt;   [ take me to /posts] &gt;   [ take me to /projects ]"
+    "text": "andrew-1234@home:~$ Who am I?\n\nI’m Andrew. I like programming and ecology.\n\n\nandrew-1234@home:~$ What is this place?\n\nSomewhere to share my notes and what I’m working on\n\n\nandrew-1234@home:~$ learn more -about me andrew-1234@home:~$ go to -posts andrew-1234@home:~$ go to -projects"
   },
   {
     "objectID": "index.html#recent-projects",
     "href": "index.html#recent-projects",
-    "title": "Andrew Schwenke, PhD",
+    "title": "Andrew Schwenke",
     "section": "Recent Projects",
-    "text": "Recent Projects\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Recent Projects\n\n\n\n\n\n\n\nHarnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species\n\n\n7 min\n\n\nA case study using acoustic monitoring data to model changes in avian species composition within the Mulga Lands bioregion of Queensland.\n\n\n\nAndrew Schwenke\n\n\n\n\n\n\n\n\n\n\n\nJob Searching Tool\n\n\n1 min\n\n\nA query builder for advanced job searches. Built with plain HTML CSS JavaScript\n\n\n\nAndrew Schwenke\n\n\n\n\n\n\n\n\n\n\n\nThe Australian Acoustic Observatory, Hoot Detective, & the impact of good data on Species Distribution Models\n\n\n10 min\n\n\nA case study demonstrating the use of open access acoustic data and citizen science annotations to model Owl species distributions.\n\n\n\nDr Andrew Schwenke, Dr Rob Clemens\n\n\n\n\n\n\n\n\n\n\n\nTrem - Threads style note taking\n\n\n1 min\n\n\nTrem is a full stack web application for capturing notes as trains of thoughts.  Stack: Python, TypeScript, Django Ninja, PostgreSQL, React\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\nYour Project Title\n\n\n1 min\n\n\nA brief description of your project.\n\n\n\nYour Name\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/projects/boj-job/index.html",
+    "href": "posts/projects/boj-job/index.html",
+    "title": "Job Searching Tool",
+    "section": "",
+    "text": "Project repository - https://github.com/andrew-1234/boj-job\nLive website - https://andrew-1234.github.io/boj-job/"
+  },
+  {
+    "objectID": "index.html#hello",
+    "href": "index.html#hello",
+    "title": "Andrew Schwenke, PhD",
+    "section": "Hello",
+    "text": "Hello\n\n\nJob searching tool"
+  },
+  {
+    "objectID": "posts/projects/boj-job/index.html#description",
+    "href": "posts/projects/boj-job/index.html#description",
+    "title": "Job Searching Tool",
+    "section": "Description",
+    "text": "Description\nA single page tool for easy job searching. A form takes user input on which job boards to include, a location search term, one or more search terms / phrases (e.g. position titles), and a time range. The query link is then produced for a user to open.\nSearches can also be saved to favorites, which is implemented using cookies. The favorites are created with a user provided name. When a favorite is created, the contents of the form fields are saved, allowing the favorite to be loaded at a later time for easy repeat searching.\nVisit the pages website to try it."
+  },
+  {
+    "objectID": "posts/projects/boj-job/index.html#motivation",
+    "href": "posts/projects/boj-job/index.html#motivation",
+    "title": "Job Searching Tool",
+    "section": "Motivation",
+    "text": "Motivation\nBetter job searching:\n\nFind new postings with the time filter\nSearch against multiple job websites (Australia based)\nUse words and phrases to narrow your search (use commas to add more than one)\n\nThere is no ‘Seek’ search option because the actual job pages aren’t indexed."
+  },
+  {
+    "objectID": "posts/projects/boj-job/index.html#related-proejcts",
+    "href": "posts/projects/boj-job/index.html#related-proejcts",
+    "title": "Job Searching Tool",
+    "section": "Related proejcts",
+    "text": "Related proejcts\n\nIdea based on https://briansjobsearch.com/ (a USA focused tool)"
+  },
+  {
+    "objectID": "posts/projects/boj-job/index.html#related-projects",
+    "href": "posts/projects/boj-job/index.html#related-projects",
+    "title": "Job Searching Tool",
+    "section": "Related projects",
+    "text": "Related projects\n\nIdea based on https://briansjobsearch.com/ (a USA focused tool)"
+  },
+  {
+    "objectID": "posts/projects/hoot-sdm/index.html#introduction",
+    "href": "posts/projects/hoot-sdm/index.html#introduction",
+    "title": "The Australian Acoustic Observatory, Hoot Detective, & the impact of good data on Species Distribution Models",
+    "section": "Introduction",
+    "text": "Introduction\n\nDeveloped in a collaboration between Open Ecoacoustics & EcoCommons.\n\nThe Australian Acoustic Observatory (A2O) is a continental-scale acoustic sensor network that provides data for hundreds of acoustic sensors across seven Australian ecoregions. This data is freely available to researchers, citizen scientists, and the general public, for use under CC BY 4.0 licence. More information about the A2O can be found in a paper published in Methods in Ecology and Evolution (Roe at al., 2021). For National Science Week in 2021, a partnership between ABC Science, the Australian Acoustic Observatory, Queensland University of Technology and the University of New England, formed the Hoot Detective project (Figure 1). This was a citizen science project that used recordings from the Australian Acoustic Observatory, resulting in the identification of 23,568 owl calls by members of the public. There are a variety of advantages to this kind of continental scale data (Guerin et al. 2020) and those advantages directly apply to questions looking to predict a species distribution.\n\n\n\nFigure 1: Hoot Detective website\n\n\nFirst, occurrence data for most fauna in Australia are not systematically collected at geographic scales. Most data for species that vocalise are highly biased with the most sampling done near the handful of urban areas in what is otherwise the remote continent of Australia. Dealing with sampling bias in species distribution modelling is one of the biggest challenges to generating optimal results. However, these sampling issues can be virtually eliminated by deploying ecoacoustic sensors based on sampling protocols that are representative of both geographic and environmental space. The Australian Acoustic Observatory achieves this at a continental scale, with around 360 continuously operating acoustic sensors deployed across Australia in a variety of unique ecosystems.\nSecond, while there will always be variation in detection probability in any fauna survey, ecoacoustic data takes a huge leap toward delivering standardised data. In species distribution modelling, the complications arising from variable detection rates have led many researchers to model detection, using something called occupancy modelling. Indeed, occupancy modelling may be helpful when accounting for variable detection rates between sites and sensors when working with acoustic data. But when using acoustic sensors, survey effort is much more standardised than in human observation data, which can reduce or eliminate the need to use such techniques. Furthermore, species identifications from ecoacoustic data are verifiable and can exist as a persistent record for future use and evaluation.\nThird, the field of species distribution modelling has thousands of papers related to using presence only modelling methods, or using binomial methods (presence / absence) with pseudo-absence data. Pseudo absence data attempts to make the best possible guess as to where species might be absent or at the least ensures that random pseudo-absence points are not selected in areas where there is zero chance that the species might be present. As acoustic sensors are increasingly deployed an understanding of detection probability begins to emerge for different sensors and different species. In other words, we can determine how long a sensor should be left out before we are nearly certain that the species of interest is not present. Once a sensor is left out the required amount of time, a true absence location is generated, and such data have significant impacts on how well you can model species distributions using a variety of both statistical and machine learning techniques.\nFourth, an acoustic device records every single call a species makes near a monitor. While human observation data can also provide such data, it would be a massive undertaking to deliver that kind of data at scale. Yet, for many species that vocalise, one can expect call rates to be highest in areas and times of year when species are breeding, and vocalisation rates may even be higher in areas of higher quality habitat (at least for some species). Modelling the distribution of call frequency or abundance has been done far less in the literature than presence only modelling, yet the potential insights from such models are clear. For select species, an area with more calling might be more important for the species, and an area with more individuals calling might be relatively more important than the more silent areas.\nThe advantages and assumptions discussed so far are likely to vary depending on the specific research question and species of interest. Nevertheless, the purpose of this use case is to demonstrate the kinds of results that can be generated with presence absence vs presence only data, and the insights that could be gained from predicting the spatial variation in call frequency. We argue the benefits are clear, and ask you to help deliver this kind of data at scale."
+  },
+  {
+    "objectID": "posts/projects/hoot-sdm/index.html#methods",
+    "href": "posts/projects/hoot-sdm/index.html#methods",
+    "title": "The Australian Acoustic Observatory, Hoot Detective, & the impact of good data on Species Distribution Models",
+    "section": "Methods",
+    "text": "Methods\nThe data were obtained from the historical Hoot Detective project, and consisted of annotations for five owl species: Masked Owl (Tyto novaehollandiae), Eastern Barn Owl (Tyto javanica), Barking Owl (Ninox connivens), Powerful Owl (Ninox strenua), and Southern Boobook (Ninox boobook). All data, including audio recordings, annotations, and associated sensor metadata, is available for download and use from the A2O data portal. A GitHub repository detailing the complete methods for preparing the Hoot Detective data, prediction layers, and running preliminary SDM analyses with R is also provided.\n\nData preparation\nThe Hoot Detective project resulted in 28723 segments of annotated audio, from 37 sensors. Each segment of audio was 10 seconds in length, resulting in a total of just under 80 hours of annotated audio. Audio segments came from most days spanning between June, 2019, until July, 2021 (Figure 2). These annotations were summarised in R to get occurrence data for each species, which included determining if at any point the target species was recorded (presence) or was absent from recordings (absence).\n\n\n\nFigure 2: Histogram demonstrating total frequency of annotated audio segments per day in the Hoot Detective data set.\n\n\nA Powerful Owl presence was recorded in Western Australia, which is quite far outside of the recognised distribution. Therefore, Powerful Owl records were filtered further, using a buffered boundary of the known distribution extent derived from ALA records, to remove these potentially anomalous records.\nThe A2O uses a paired sensor design, with four sensors per site. The distance between sensors is typically within 500m to 5000m. Therefore, we first attempted to use environmental layers at a high spatial resolution (25m), to capture fine scale variation between proximate sensors.This came at a high computer processing cost. Even working with buffered extents, and using a high-performance PC, the process was slow, highlighting the challenges of using such high resolution data. As a result, we decided to instead use a 250m resolution for preliminary analyses in R, and a 1000m resolution on the ecocommons platform. To get a raster stack for the extent of Australia, the terra package in R was used to crop and mask layers to a vector of the Australian boundary. Layers were then resampled from their original resolution where necessary to 250m, using bilinear interpolation for continuous bioclim data, mean for forest canopy and height, and nearest neighbour for categorical data. All layers were projected to the project CRS (EPSG: 4326). For Powerful Owl, the raster stack was cropped and masked to the buffered boundary extent representing the known distribution.\n\n\nAnalysis\nPowerful Owl presence data were used to extract environmental variable values from eastern Australia, and the resulting presence data and environmental rasters were used in a Maxent model in R (see example code).\nPresence only vs presence absence comparisons were made within the EcoCommons platform. Evironmental predictors were at 1 km resolution and included the ANU Bioclim variables, 5,6,13 & 17, run in BioClim and SRE for presence only, and ANN, RF, & MARS. First, the presence only occurrence records were used to generate a BioClim model prediction using default settings. Then the presence absence data were used in an Artificial Neural Network (ANN) model, Random Forest model, and multivariate adaptive regression splines (MARS).\nTo examine the potential of predicting call frequency across Australia we selected the Southern Boobook which was recorded at all but one station (mean 137 vocalisations, range 0 to 993). We then extracted raster grid values from the two forest area variables, bioclim variables 5,6 and 17, and NVIS, a national vegetation classification. We then ran a Boosted regression tree (BRT) model specifying a Poisson distribution (see example code)."
+  },
+  {
+    "objectID": "posts/projects/hoot-sdm/index.html#results",
+    "href": "posts/projects/hoot-sdm/index.html#results",
+    "title": "The Australian Acoustic Observatory, Hoot Detective, & the impact of good data on Species Distribution Models",
+    "section": "Results",
+    "text": "Results\nThe 37 monitoring stations that were included in the Hoot Detective project are spread across large areas of Australia, so it is perhaps not surprising that data availability and results varied between species. For example, the Powerful Owl which is only found in eastern Australia had relatively few locations where they were recorded. Chance resulted in more detections of Powerful Owl in southeast Queensland in observatory data, and that bias is reflected in attempts with multiple methods to predict their distribution using only observatory data. Nonetheless, the presence-only model MaxEnt proved to be the best at approaching predictions of the actual distribution of Powerful Owl in eastern Australia (Figure 3).\n\n\n\nFigure 3: MaxEnt prediction of environmental suitability using Powerful Owl prescence data and five environmental layers. Prescenes are marked with blue circles (note that some records are overlapping due to the scale).\n\n\nWhen comparing presence only data with presence / absence data, again results varied by species, but were most interesting for a species that had close to the same number of presence and absence data available, the Masked Owl. Using this owl’s presence only data in a Bioclim model resulted in a reasonable approximation of geographic distribution in southern Australia (Figure 4). However, that model completely failed to predict the presence of this owl in much of northern Australia. When presence absence data was run through a Artificial Neural Network model, the predictions included all of northern Australia (Figure 5) and were much more closely aligned to the known continental distribution of Masked Owl.\n\n\n\nFigure 4: Masked Owl distribution prediction using a Bioclim model (presence only), generated on the EcoCommons platform.\n\n\n\n\n\nFigure 5: Masked Owl distribution prediction using a Artificial Neural Network model (presence / absence data), generated on the EcoCommons platform.\n\n\nThe mapped frequency of Southern Boobook suggests that it would be possible to predict areas where these owls call more (Figure 6). The results demonstrated some reasonable patterns, such as increased call frequency along what might be creeks or waterways in the outback, while the lowest call frequencies were in outback deserts. The high call frequency in SW WA also looked reasonable, but the lack of similar high call frequency areas in much of eastern Australia are likely due to insufficient sampling in this region.\n\n\n\nFigure 6: Predicted call frequency (number of calls) of the Southern Boobook, using a Boosted Regression Tree."
+  },
+  {
+    "objectID": "posts/projects/hoot-sdm/index.html#discussion",
+    "href": "posts/projects/hoot-sdm/index.html#discussion",
+    "title": "The Australian Acoustic Observatory, Hoot Detective, & the impact of good data on Species Distribution Models",
+    "section": "Discussion",
+    "text": "Discussion\nIt was surprising how well some of the data predicted continental distributions despite there being relatively few records available (&lt; 37 for each species). It was also striking how vastly different predictions were when using presence only vs presence absence data. Finally, the variation in predicted call frequency of the Southern Boobook across Australia suggests that the metric of call frequency may be a useful indicator of habitats that get more use, potentially related to habitat quality or breeding activity.\nInitial attempts to model with 25m resolution proved to be too much data to handle, but further work to tile data extractions and predictions would likely allow such high resolution predictions, and while not useful at the continental scale modelled here, there were some stations that were fairly close together, and with fine resolution data it might be possible to tease apart the within cluster variation in presences or frequency of presences.\nIt is well established that acoustic monitoring can provide significant ecological insights, across both broad spatial and temporal scales. As acoustic monitoring activities continue to grow, we demonstrate that when such data is annotated, whether by using recognisers, or through citizen science projects such as Hoot Detective, the absence data acoustic sensors can deliver and the call frequency metric provided, can produce game changing results when looking to understand species distributions. This process is further aided by the use of online platforms such as EcoCommons, which allows practitioners and researchers to seamlessly examine their data using a wide range of modelling tools and trusted datasets."
+  },
+  {
+    "objectID": "posts/projects/hoot-sdm/index.html#acknowledgements",
+    "href": "posts/projects/hoot-sdm/index.html#acknowledgements",
+    "title": "The Australian Acoustic Observatory, Hoot Detective, & the impact of good data on Species Distribution Models",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\nWe would like to first acknowledge the Australian Acoustic Observatory (A2O) for the recording data.\nThe Hoot Detective project for providing the annotations.\nWe would also like to acknowledge the EcoCommons platform for generating some of the models used for this use case:\n\nTo learn more about Species Distribution Modelling, you can visit the EcoCommons support page section on SDMs.\nVisit the Educational Material section to learn about using the EcoCommons modelling platform.\nRead more about ecoacoustic integration with EcoCommons here."
+  },
+  {
+    "objectID": "posts/projects/gdm/index.html#summary",
+    "href": "posts/projects/gdm/index.html#summary",
+    "title": "Harnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species",
+    "section": "Summary",
+    "text": "Summary\nUnderstanding changes in species composition across temporal and spatial scales can provide important insights for management and conservation of biodiversity, particularly with increasing threats due to climate change and land clearing. Traditionally, species community surveys, performed with consistent methodology, are used to model compositional dissimilarity. However, the aim of this project was to demonstrate how data collected by passive acoustic monitoring (PAM) may also be used to examine spatial variation in species composition across a landscape.\nThis case study uses annotated acoustic data from a previously published study (Doohan et al. 2019), to demonstrate how acoustic data, and the analytical tools coming soon to EcoCommons (an R package to help you understand how to set up a GDM model is now available), can be used to model changes in avian species composition within the Mulga Lands bioregion of Queensland. The advantages of PAM include reduced observer bias, consistency in survey effort, and is feasibly scalable across both time and space.\nThe R code used to generate these results is provided."
+  },
+  {
+    "objectID": "posts/projects/gdm/index.html#introduction-1",
+    "href": "posts/projects/gdm/index.html#introduction-1",
+    "title": "Harnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species.",
+    "section": "Introduction",
+    "text": "Introduction\n\nDeveloped in a collaboration between Open Ecoacoustics & EcoCommons.\n\nFaunal biodiversity is known to be influenced by vegetation condition, structure and diversity. Given the history and extent of vegetation clearing across Australia, it is essential that the relationships between vegetation and faunal biodiversity are understood. The Mulga Lands bioregion, which stretches from south western Queensland into northern New South Wales, is one such area that has experienced high levels of vegetation clearance. This region provides a unique habitat for many arid, semi-arid and temperate species. However, the effects of regrowth vegetation on community composition is poorly understood, particularly in semi-arid and arid environments. Birds are often sensitive to the effects of landscape modification and clearing, and therefore represent good candidate species to study the effects of regrowth vegetation. As a result, avian biodiversity was examined in the Mulga Lands bioregion, in relation to various stages of vegetation growth.\nThis research involved the use of passive acoustic monitoring devices, which can capture large scale datasets on environmental soundscapes. Analysis of those soundscapes represents the focus of the emerging field of ecoacoustics. The increasing use of passive acoustic monitoring represents an ever-growing body of data which can be harnessed to answer an array of ecological questions (e.g. A2O, ecosounds). We therefore intend to demonstrate how this data is also an ideal candidate to be used to examine compositional turnover of species across various spatial scales, which has traditionally been performed with presence absence field survey data. The advantage of this workflow is being able to leverage existing acoustic datasets that may already contain species annotations. This data, accompanied by either study site survey data, or remote sensing spatial layers, will be able to provide key insights into environmental predictors of biological diversity across various spatial and temporal scales."
+  },
+  {
+    "objectID": "posts/projects/gdm/index.html#methods",
+    "href": "posts/projects/gdm/index.html#methods",
+    "title": "Harnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species",
+    "section": "Methods",
+    "text": "Methods\nThe data used in this case study consisted of avian species identifications from acoustic recordings obtained from a previous study undertaken by Doohan et al. (2019). Their study took place in the Bowra Wildlife Sanctuary, an Australian Wildlife Conservancy property approximately 850km west of Brisbane, Australia. The data came from nine study sites in total, which were classified based on their time since clearing occurred, representing three regrowth sites (cleared within the last 15 years; site code NR), three intermediate regrowth sites (cleared between 15 and 30 years; site code IR) and three old growth sites (no clearing events within the last 30 years; site code OG and OM) (Figure 1). One acoustic monitoring device was deployed at each site (model SM3; Wildlife Acoustics), and set to record the dawn chorus each day continuously for 3 hours (recorded as WAV format, in mono at a sample rate of 22,050 Hz) during the study period of 28 days (29th August 2017 – 25th September 2017). From this data, 45 hours of audio were processed by Doohan et al. (2019) using a stratified hierarchical approach, representing 15 randomly selected days, and all bird species were manually identified from their calls and annotated on the Ecosounds website (project: “Cunnamulla”).\n\n\n\nFigure 1: Study site locations represented by pins (yellow: new regrowth, green: intermediate regrowth, red: old growth). Inset map of Australia indicates location of the study area.\n\n\nFor the current project, we demonstrate how an existing annotated acoustic dataset, along with study site environmental data, can be used to model compositional dissimilarity of avian species in relation to various environmental predictors. Therefore, a generalised dissimilarity model (GDM) approach was chosen. The benefit of this method is that it can statistically relate beta diversity to environmental gradients, while accounting for two important nonlinearities present in more traditional ecological methods (see Ferrier et al., 2007).\nUsing the GDM package in R (function: GDM with default parameters), a model was fit using a range of environmental variables that were collected in the field at the location of each acoustic sensor. Vegetation assessments were undertaken by Doohan et al. (2019) in March 2018, using the line intercept method.\nThe final variables included in the model were:\n\nTree height (m)\nTree cover (%)\nDiameter at breast height (DBH, cm)\nShrub height (m)\nDistance to nearest water course (QLD Waterways spatial dataset, m)\nGeographic distance (between sites, m)\n\nA model using raster layer Soil Adjusted Vegetation Index (SAVI) from Sentinel Hub was also performed, but discontinued due to its low explanatory power (percent deviance explained = 2.001)."
+  },
+  {
+    "objectID": "posts/projects/gdm/index.html#results",
+    "href": "posts/projects/gdm/index.html#results",
+    "title": "Harnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species",
+    "section": "Results",
+    "text": "Results\nThe model had a percent deviance explained of 27.159, representing the variation in observed dissimilarities explained by the model. A slight positive linear relationship was seen, whereby as the predicted ecological distance between sites increased (predictors), so too did observed compositional dissimilarity (Figure 2). Of the environmental predictors, the sum of I-spline coefficients was highest for the predictor value tree cover, indicating the greatest effect on compositional dissimilarity. It was seen by the gradient of the slope that changes between 0 to 30% tree cover resulted in the greatest changes in predicted dissimilarity between study site pairs (Figure 2). However, a permutation assessment showed that the model was not statistically significant (p = 0.370). The intercept of the model was 0.206, which represents the expected dissimilarity between sites when the environmental predictors are equal.\n\n\n\nFigure 2: Main output plots of the GDM. A: observed compositional dissimilarity as a function of predicted ecological distance, where each point represents a site pair, and the line represents the GDM-predicted dissimilarity. B: Observed compositional dissimilarity as a function of predicted compositional dissimilarity, where the line represents a line of equality. C – F: Plotted GDM spline functions for each environmental predictor variable."
+  },
+  {
+    "objectID": "posts/projects/gdm/index.html#discussion",
+    "href": "posts/projects/gdm/index.html#discussion",
+    "title": "Harnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species",
+    "section": "Discussion",
+    "text": "Discussion\nThese results successfully demonstrate a simple workflow in which acoustic datasets can be leveraged to provide insight into patterns of biodiversity change relative to environmental predictors. In this case, the original sampling design could have limited the model’s ability to predict changes in composition throughout the landscape relative to the environmental predictors. For example, all sensors were located inside a patch of vegetation at least 150 m or greater in diameter. The total number of sample sites was also small, and sensors were positioned across a relatively small spatial. Nevertheless, this is a great example workflow of how annotated acoustic data can be used to perform more robust modelling methods, such as GDM.\nIn this example, study site vegetation survey data was available at the location of each recorder. However, it is also possible to use spatially complete gridded environmental data with the GDM package, such as remotely sensed data in raster format. This allows projection of the model across the spatial grid, to map predicted patterns of dissimilarity.\nWith the growing body of acoustic data, coupled with remotely sensed data or ground-survey metadata, it will be possible to examine patterns of biodiversity variation across large spatial and temporal scales. Identifying environmental factors that are important drivers for species occurrences can help to guide land management, landscape rehabilitation and inform restoration guidelines. It is also possible to make predictions about compositional turnover related to changes in environmental conditions, such as land cover, or temperature (climate change)."
+  },
+  {
+    "objectID": "posts/projects/gdm/index.html#acknowledgements",
+    "href": "posts/projects/gdm/index.html#acknowledgements",
+    "title": "Harnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\nI would like to first acknowledge the authors of the original publication from which this data was sourced: Brendan Doohan, Jeanette Kemp, and Susan Fuller. The article was published Global Ecology and Conservation (2019), and is available here.\n\nThis project was internally funded by the Queensland University of Technology.\nWe thank the Australian Wildlife Conservancy for site access, previous species records and facilitation of the project.\nProf. Paul Roe for the loan of additional sensors.\nThe Ecosounds platform, for management, access, visualisation, and analysis of the acoustic data used in this project.\n\nThe EcoCommons platform:\n\nRead more about ecoacoustic integration with EcoCommons here.\nSee the new community modelling (GDM) R package by EcoCommons.\nVisit the Educational Material section to learn more about the platform."
+  },
+  {
+    "objectID": "posts/projects/gdm/index.html#introduction",
+    "href": "posts/projects/gdm/index.html#introduction",
+    "title": "Harnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species",
+    "section": "Introduction",
+    "text": "Introduction\n\nDeveloped in a collaboration between Open Ecoacoustics & EcoCommons.\n\nFaunal biodiversity is known to be influenced by vegetation condition, structure and diversity. Given the history and extent of vegetation clearing across Australia, it is essential that the relationships between vegetation and faunal biodiversity are understood. The Mulga Lands bioregion, which stretches from south western Queensland into northern New South Wales, is one such area that has experienced high levels of vegetation clearance. This region provides a unique habitat for many arid, semi-arid and temperate species. However, the effects of regrowth vegetation on community composition is poorly understood, particularly in semi-arid and arid environments. Birds are often sensitive to the effects of landscape modification and clearing, and therefore represent good candidate species to study the effects of regrowth vegetation. As a result, avian biodiversity was examined in the Mulga Lands bioregion, in relation to various stages of vegetation growth.\nThis research involved the use of passive acoustic monitoring devices, which can capture large scale datasets on environmental soundscapes. Analysis of those soundscapes represents the focus of the emerging field of ecoacoustics. The increasing use of passive acoustic monitoring represents an ever-growing body of data which can be harnessed to answer an array of ecological questions (e.g. A2O, ecosounds). We therefore intend to demonstrate how this data is also an ideal candidate to be used to examine compositional turnover of species across various spatial scales, which has traditionally been performed with presence absence field survey data. The advantage of this workflow is being able to leverage existing acoustic datasets that may already contain species annotations. This data, accompanied by either study site survey data, or remote sensing spatial layers, will be able to provide key insights into environmental predictors of biological diversity across various spatial and temporal scales."
+  },
+  {
+    "objectID": "posts/projects/trem/index.html#what-is-it",
+    "href": "posts/projects/trem/index.html#what-is-it",
+    "title": "Trem - Threads style note taking",
+    "section": "What is it?",
+    "text": "What is it?\nTrem (noun)\n\n(Brazil) train\n(Minas Gerais, slang): a thing, anything (except a train)\n\nTrem is a note taking application. Related notes can be added to an existing note, forming a thread, representing a chain or ‘train’ of thought. You could think of it as being similar to a social media comment section, only you are talking to yourself.\nBy organising notes into threads, you maintain the natural flow of your thoughts, making it easier to trace the evolution of ideas over time. This threaded approach encourages deeper exploration of topics, as related thoughts can be seamlessly connected, much like a personal conversation.\nAdditionally, the atomic nature of the notes ensures that each idea stands on its own, while still allowing for the flexibility to group them contextually within a thread. The inclusion of tagging adds another layer of organisation, enabling you to cross-reference ideas across different threads.\nWith planned features like thread linking, Trem aims to offer a robust framework for managing complex networks of ideas, reminiscent of the zettelkasten method, but with a more dynamic and intuitive interface. This structure not only enhances your ability to capture fleeting thoughts but also provides the tools to build comprehensive knowledge networks over time.\nUsing Trem fosters incremental writing, allowing you to develop and refine your ideas over time. The incrememntal writing method encourages revisiting and expanding on notes, making it easier to build complex concepts gradually without the pressure to finalise them immediately. This structure not only enhances your ability to capture fleeting thoughts but also provides the tools to build comprehensive knowledge networks and polished pieces of writing over time.\nFor more on incremental writing, see:\n\nEvergreen notes permit smooth incremental progress in writing (“incremental writing”)\n\nZettelkasten method resources:\n\nIntroduction to the Zettelkasten Method - A comprehensive guide to understanding the Zettelkasten method.\nBuild your own second brain with the Zettelkasten method - How to apply Zettelkasten in today’s digital age.\nDetailed Guide on the Zettelkasten System - An in-depth explanation of the Zettelkasten method and its principles."
+  },
+  {
+    "objectID": "posts/projects/trem/index.html#implementation",
+    "href": "posts/projects/trem/index.html#implementation",
+    "title": "Trem - Threads style note taking",
+    "section": "Implementation",
+    "text": "Implementation\nTrem is built with a full stack web application using the following technologies:\n\nBackend: Python Django Ninja PostgreSQL\nFrontend: TypeScript React\nDeployment: Render\n\nThis app is a work in progress, under active development."
+  },
+  {
+    "objectID": "posts/projects/shimmy/index.html#introduction",
+    "href": "posts/projects/shimmy/index.html#introduction",
+    "title": "Shimmy - A window positioning tool for macOS",
+    "section": "",
+    "text": "This is a dummy project page. You can replace this text with an introduction to your project."
+  },
+  {
+    "objectID": "posts/projects/shimmy/index.html#project-summary",
+    "href": "posts/projects/shimmy/index.html#project-summary",
+    "title": "Shimmy - A window positioning tool for macOS",
+    "section": "Project Summary",
+    "text": "Project Summary\nShimmy is a lightweight utility designed for macOS users who need quick and precise control over their window positions. It allows users to nudge windows in any direction using customisable global keyboard shortcuts. Unlike full-fledged window management tools, Shimmy focuses on providing simple directional adjustments, making it a perfect companion to other window management solutions."
+  },
+  {
+    "objectID": "posts/projects/shimmy/index.html#technical-stack",
+    "href": "posts/projects/shimmy/index.html#technical-stack",
+    "title": "Shimmy - A window positioning tool for macOS",
+    "section": "Technical Stack",
+    "text": "Technical Stack\n\nProgramming Languages: Go, C\nBuild Pipeline Github Workflows, Make\nPlatform: macOS\nAdditional Requirements: C Compiler"
+  },
+  {
+    "objectID": "posts/projects/shimmy/index.html#key-features",
+    "href": "posts/projects/shimmy/index.html#key-features",
+    "title": "Shimmy - A window positioning tool for macOS",
+    "section": "Key Features",
+    "text": "Key Features\n\nDirectional Window Movement: Easily move active windows in any direction using the keyboard.\nCustomisable Shortcuts: Configure movement distance with the -p flag, allowing for fine-tuned control.\nForeground and Background Operation: Shimmy can run in the foreground or as a background process, making it flexible for different use cases.\nFuture Enhancements: Plans to add support for custom keybindings and to run as a menu bar app for more seamless integration."
+  },
+  {
+    "objectID": "posts/projects/shimmy/index.html#challenges-and-solutions",
+    "href": "posts/projects/shimmy/index.html#challenges-and-solutions",
+    "title": "Shimmy - A window positioning tool for macOS",
+    "section": "Challenges and Solutions",
+    "text": "Challenges and Solutions\nDeveloping a tool that interacts with macOS’s window management using only keyboard shortcuts required overcoming challenges related to native system integration.\nGo was chosen for its simplicity and performance, making it ideal for creating lightweight tools like Shimmy. However, Go’s cross-platform nature doesn’t natively support macOS-specific window management functions.\nTo bridge this gap, the cgo package was used to integrate C code into the Go project. This allowed me to utilise Apple’s native C libraries for enabling precise control over window positioning, while maintaining the efficiency and ease of development provided by Go."
+  },
+  {
+    "objectID": "posts/projects/shimmy/index.html#usage",
+    "href": "posts/projects/shimmy/index.html#usage",
+    "title": "Shimmy - A window positioning tool for macOS",
+    "section": "Usage",
+    "text": "Usage\n\nClone the repository and build the binary using go build.\nRun the binary with options to control window movements.\nExample command, setting the movement distance to 10 pixels:\n./shimmy -p 10"
+  },
+  {
+    "objectID": "posts/projects/shimmy/index.html#future-development",
+    "href": "posts/projects/shimmy/index.html#future-development",
+    "title": "Shimmy - A window positioning tool for macOS",
+    "section": "Future Development",
+    "text": "Future Development\nShimmy’s development roadmap includes features like customisable keybindings and running as a menu bar application for even easier access and usability."
+  },
+  {
+    "objectID": "posts/projects/shimmy/index.html#related-projects",
+    "href": "posts/projects/shimmy/index.html#related-projects",
+    "title": "Shimmy - A window positioning tool for macOS",
+    "section": "Related Projects",
+    "text": "Related Projects\n\nRectangle: A comprehensive window management app for macOS."
+  },
+  {
+    "objectID": "posts/projects/trem/index.html#project-summary",
+    "href": "posts/projects/trem/index.html#project-summary",
+    "title": "Trem - Threads style note taking",
+    "section": "Project Summary",
+    "text": "Project Summary\nTrem (noun)\n\n(Brazil) train\n(Minas Gerais, slang): a thing, anything (except a train)\n\nTrem is a note-taking application designed to help users organise their thoughts in a threaded manner. Inspired by the concept of a “train of thought,” Trem allows users to link related notes into threads, making it easy to trace the evolution of ideas over time. This structure mimics the flow of a personal conversation, enabling deeper exploration of topics and better organisation of complex ideas. Note that Trem is under the development phase and is not yet ready for production use."
+  },
+  {
+    "objectID": "posts/projects/trem/index.html#technical-stack",
+    "href": "posts/projects/trem/index.html#technical-stack",
+    "title": "Trem - Threads style note taking",
+    "section": "Technical Stack",
+    "text": "Technical Stack\n\nProgramming Languages: Python, TypeScript\nFrameworks: Django (backend), React (frontend)\nDatabase: Postgres\nBuild Tools: Bash scripts for development tasks\nASGI Server: Gunicorn with Uvicorn workers for deploying and supporting asynchronous capabilities"
+  },
+  {
+    "objectID": "posts/projects/trem/index.html#key-features",
+    "href": "posts/projects/trem/index.html#key-features",
+    "title": "Trem - Threads style note taking",
+    "section": "Key Features",
+    "text": "Key Features\n\nThreaded Notes: Organise your notes into threads, allowing for easy navigation and logical grouping of related ideas.\nTagging System: Apply tags to notes for cross-referencing ideas across different threads.\nIncremental Writing Support: Encourages revisiting and expanding notes, fostering gradual development of complex concepts."
+  },
+  {
+    "objectID": "posts/projects/trem/index.html#challenges-and-solutions",
+    "href": "posts/projects/trem/index.html#challenges-and-solutions",
+    "title": "Trem - Threads style note taking",
+    "section": "Challenges and Solutions",
+    "text": "Challenges and Solutions\nBuilding a robust note-taking application like Trem required careful consideration of both frontend and backend integration. The choice of Django for the backend was made to leverage its strong ORM capabilities, which are well-suited for managing complex relational data like threaded notes. React was chosen for the frontend to provide a dynamic and responsive user interface."
+  },
+  {
+    "objectID": "posts/projects/trem/index.html#usage",
+    "href": "posts/projects/trem/index.html#usage",
+    "title": "Trem - Threads style note taking",
+    "section": "Usage",
+    "text": "Usage\nTo start using Trem locally:\n\nClone the repository and navigate to the project directory.\nBuild the project using the ./build.sh script.\nStart the application using python -m gunicorn trem.asgi:application -k uvicorn.workers.UvicornWorker."
+  },
+  {
+    "objectID": "posts/projects/trem/index.html#future-development",
+    "href": "posts/projects/trem/index.html#future-development",
+    "title": "Trem - Threads style note taking",
+    "section": "Future Development",
+    "text": "Future Development\nFuture plans for Trem include adding features like thread linking and enhanced tag management. These additions will provide users with more powerful tools to create and manage complex knowledge networks.\nYou can explore the project further on GitHub.\nFor more on incremental writing, see:\n\nEvergreen notes permit smooth incremental progress in writing (“incremental writing”)\n\nZettelkasten method resources:\n\nIntroduction to the Zettelkasten Method - A comprehensive guide to understanding the Zettelkasten method.\nBuild your own second brain with the Zettelkasten method - How to apply Zettelkasten in today’s digital age.\nDetailed Guide on the Zettelkasten System - An in-depth explanation of the Zettelkasten method and its principles."
   }
 ]

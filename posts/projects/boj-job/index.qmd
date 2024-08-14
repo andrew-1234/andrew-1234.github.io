@@ -1,0 +1,42 @@
+---
+title: "Job Searching Tool"
+author: "Andrew Schwenke"
+description: | 
+  A query builder for advanced job searches.<br>
+  Built with plain `HTML` `CSS` `JavaScript`<br>
+repository: https://github.com/andrew-1234/boj-job
+website: https://andrew-1234.github.io/boj-job/
+
+---
+
+* Project repository - <https://github.com/andrew-1234/boj-job>
+* Live website - <https://andrew-1234.github.io/boj-job/>
+
+## Description
+
+A single page tool for easy job searching. A form takes user input on which job
+boards to include, a location search term, one or more search
+terms / phrases (e.g. position titles), and a time range. The query link is then
+produced for a user to open. 
+
+Searches can also be saved to favorites, which is implemented using cookies. The
+favorites are created with a user provided name. When a favorite is created, the
+contents of the form fields are saved, allowing the favorite to be loaded at a
+later time for easy repeat searching. 
+
+[Visit the pages website to try it.](https://andrew-1234.github.io/boj-job/)
+
+## Motivation
+
+Better job searching:
+
+- Find new postings with the time filter
+- Search against multiple job websites (Australia based)
+- Use words and phrases to narrow your search (use commas to add more than one)
+
+There is no 'Seek' search option because the actual job pages aren't indexed. 
+
+## Related projects
+
+- Idea based on https://briansjobsearch.com/ (a USA focused tool)
+

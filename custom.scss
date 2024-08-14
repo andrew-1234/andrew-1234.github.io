@@ -37,7 +37,7 @@ $text-color: rgba(255, 255, 255, 0.822); // Safe choice for now
 // Other stuff
 $link-color: $eggplant-2;
 $card-bg: $rich-black;
-$table-hover-bg: $eggplant-2;
+// $table-hover-bg: $eggplant-2;
 $table-bg: $rich-black;
 $table-header-bg: $eggplant;
 
@@ -56,6 +56,12 @@ p.subtitle {
 
 h2 {
   border-bottom: none;
+}
+
+ol {
+  p {
+    margin: 0;
+  }
 }
 
 // Index page hero image
@@ -84,7 +90,11 @@ figcaption {
   padding: 0;
   margin: 0 !important;
 }
-
+.card-title, .listing-title {
+  color: #b173a0;
+  // font-size: 1.5rem;
+  // font-weight: bold;
+}
 // Cards - includes grid listing cards 
 .card {
   border-radius: 8px;
@@ -92,7 +102,7 @@ figcaption {
   &:hover {
     transform: translateY(-5px);
   }
-
+  
   h4 {
     text-align: center;
   }
@@ -100,6 +110,26 @@ figcaption {
   a {
     color: $primary-color;
     }
+  &.index-console {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.4rem;
+    background-color: transparent;
+    border: $eggplant-2 solid 1px;
+    font-family: monospace, monospace;
+    color: $eggplant-2;
+    font-size: 0.9rem;
+    &:hover {
+      transform: none;
+    }
+    a {
+      color: $text-color;
+      }
+    p{
+      // margin-bottom: 1rem;
+      margin-bottom: 0rem;
+    }
+  }
 }
 
 // Aside
@@ -179,7 +209,6 @@ iconify-icon {
   margin-bottom: 1rem;
   border-radius: 8px;
   overflow: hidden;
-  // change hover color
   
   th,
   td {
@@ -201,21 +230,15 @@ iconify-icon {
     td {
       border-bottom: 1px solid $eggplant-2 !important;
       a {
-        color: $primary-color;
+        // color: $primary-color;
         text-decoration: none;
-        transition: color 0.2s ease;
+        transition: color 0.2s ease-in;
       }
     }
 
     tr:last-child td {
       border-bottom: none !important;
     }
-  }
-
-  // Style for the "post one" title
-  td:first-child {
-    color: $primary-color !important;
-    font-weight: bold !important;
   }
 
   // Align the "Reading Time" column to the right
@@ -294,10 +317,6 @@ i {
   .nav-link {
     color: $secondary-color !important;
     transition: color 0.2s ease;
-
-    &:hover {
-      color: lighten($theme-background-color, 50%);
-    }
   }
 }
 
@@ -327,11 +346,6 @@ body {
   color: $text-color;
 }
 
-.index-console {
-  font-family: monospace, monospace;
-  color: $eggplant-2;
-}
-
 // simple inline button 
 .btn {
   background-color: $rich-black;
@@ -355,4 +369,26 @@ body {
 }
 .console-li {
   display: block;
+}
+
+.meta-heading {
+  text-transform: uppercase;
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-size: .8em;
+  opacity: .8;
+  font-weight: 400;
+  color: rgba(255,255,255, .822);
+}
+
+
+// custom p with no padding and margin 
+p.no-padding {
+  padding: 0;
+  margin: 0;
+}
+
+h2:has(+ .description) {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
